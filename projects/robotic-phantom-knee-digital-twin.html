@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Robotic Knee Digital Twin project by biomedical engineer Wajih Habrah.">
+
+    <title>
+        Master’s Thesis: Robotic Phantom Knee Digital Twin | Wajih Habrah
+    </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav a {
+            color: #1f2937;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        header {
+            padding: 90px 8%;
+            background: #ffffff;
+        }
+
+        header div {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .category {
+            margin-bottom: 10px;
+            color: #2563eb;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .summary {
+            max-width: 850px;
+            font-size: 1.2rem;
+            color: #4b5563;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 8%;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        .information-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .information-card {
+            padding: 22px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .information-card strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #2563eb;
+        }
+
+        .technology-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .technology-list li {
+            padding: 7px 13px;
+            background: #dbeafe;
+            border-radius: 20px;
+            color: #1e40af;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .architecture {
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border: 1px dashed #94a3b8;
+            border-radius: 10px;
+        }
+
+        .architecture-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .system-block {
+            padding: 15px 18px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            color: #2563eb;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .note {
+            padding: 20px;
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: #ffffff;
+            background: #2563eb;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #6b7280;
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">
+            <strong>Wajih Habrah</strong>
+        </a>
+
+        <a href="../index.html#projects">
+            Back to projects
+        </a>
+    </nav>
+
+    <header>
+        <div>
+            <p class="category">
+                Robotics · Biomedical Engineering · Digital Twin
+            </p>
+
+            <h1>Master’s Thesis: Robotic Phantom Knee Digital Twin</h1>
+
+            <p class="summary">
+                My master’s thesis project focused on developing a
+                one-degree-of-freedom robotic phantom knee test platform,
+                combining physical actuators, embedded sensors, ROS 2 and a
+                Unity-based digital twin for real-time control, visualization
+                and engineering validation.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+
+            <p>
+                This robotic phantom knee platform was developed as part of my
+                master’s thesis in biomedical engineering. The project investigates
+                how a physical robotic knee mechanism can be integrated with a
+                real-time digital twin for testing and validating robotic and
+                rehabilitation concepts.
+            </p>
+
+            <p>
+                The physical platform uses two antagonistic actuators, embedded
+                sensors and a Raspberry Pi running ROS 2. A corresponding model in
+                Unity receives live position and sensor data and represents the
+                movement of the physical mechanism in real time.
+            </p>
+        </section>
+
+        <section>
+            <h2>Master’s Thesis</h2>
+
+            <p>
+                This engineering platform formed the practical and research basis
+                of my master’s thesis. The work combined system development,
+                embedded sensing, robotic control, communication architecture and
+                digital-twin implementation.
+            </p>
+
+            <p>
+                <a href="https://hdl.handle.net/20.500.12380/311285" target="_blank" rel="noopener noreferrer">
+                    View the official thesis publication →
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Project Information</h2>
+
+            <div class="information-grid">
+                <div class="information-card">
+                    <strong>Field</strong>
+                    Biomedical robotics and rehabilitation technology
+                </div>
+
+                <div class="information-card">
+                    <strong>System Type</strong>
+                    Physical test platform with a real-time digital twin
+                </div>
+
+                <div class="information-card">
+                    <strong>Control Platform</strong>
+                    Raspberry Pi 5 running Ubuntu and ROS 2
+                </div>
+
+                <div class="information-card">
+                    <strong>Simulation Platform</strong>
+                    Unity-based interactive digital environment
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Contribution</h2>
+
+            <p>
+                My work included system architecture, hardware integration,
+                actuator communication, sensor acquisition, ROS 2 node
+                development and communication between the physical system
+                and Unity.
+            </p>
+
+            <p>
+                I also worked on synchronizing position and velocity data,
+                structuring the ROS communication pipeline and preparing the
+                platform for testing robotic and rehabilitation concepts.
+            </p>
+        </section>
+
+        <section>
+            <h2>System Architecture</h2>
+
+            <div class="architecture">
+                <p>
+                    Simplified communication structure
+                </p>
+
+                <div class="architecture-flow">
+                    <div class="system-block">
+                        Actuators and Sensors
+                    </div>
+
+                    <div class="arrow">↔</div>
+
+                    <div class="system-block">
+                        Raspberry Pi and ROS 2
+                    </div>
+
+                    <div class="arrow">↔</div>
+
+                    <div class="system-block">
+                        Unity Digital Twin
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technologies</h2>
+
+            <ul class="technology-list">
+                <li>Biomedical Robotics</li>
+                <li>ROS 2 Jazzy</li>
+                <li>Raspberry Pi 5</li>
+                <li>Ubuntu</li>
+                <li>Unity</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Embedded Systems</li>
+                <li>IMU Sensors</li>
+                <li>Serial Communication</li>
+                <li>Digital Twins</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Objectives</h2>
+
+            <p>
+                The platform is intended to support early-stage development
+                and validation of robotic and rehabilitation technologies.
+                It provides an environment where physical behaviour,
+                control methods and digital representations can be studied
+                together.
+            </p>
+        </section>
+
+        <section>
+            <h2>Images and Demonstration</h2>
+
+            <div class="note">
+                Project photographs, an architecture diagram and a short
+                demonstration video will be added after confidential and
+                institution-related information has been reviewed.
+            </div>
+        </section>
+
+        <a class="back-button" href="../index.html#projects">
+            ← Back to portfolio
+        </a>
+    </main>
+
+    <footer>
+        © 2026 Wajih Habrah
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Engineering portfolio of Wajih Habrah, biomedical engineer specializing in medical technology, robotics and digital twins."
+  >
+
+  <title>Wajih Habrah | Biomedical Engineer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav strong {
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #1f2937;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    header {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background: #ffffff;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .hero p:first-child {
+      color: #2563eb;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      max-width: 750px;
+      font-size: 1.25rem;
+      color: #4b5563;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      margin-right: 10px;
+      padding: 12px 22px;
+      color: #ffffff;
+      background: #2563eb;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: #2563eb;
+      background: transparent;
+      border: 1px solid #2563eb;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 8%;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+      );
+      gap: 25px;
+    }
+
+    .card {
+      padding: 25px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .technologies {
+      color: #2563eb;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #6b7280;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 650px) {
+      nav div {
+        display: none;
+      }
+
+      header {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <strong>Wajih Habrah</strong>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <p>Biomedical Engineer</p>
+
+      <h1>Wajih Habrah</h1>
+
+      <p class="subtitle">
+        Biomedical engineer with more than five years of experience
+        in hospital technology, with interests in robotics, artificial
+        intelligence, embedded systems and digital twins.
+      </p>
+
+      <a class="button" href="#projects">
+        View my projects
+      </a>
+
+      <a
+        class="button secondary"
+        href="https://github.com/WajihHabrah"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub profile
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>
+        I hold bachelor's and master's degrees in biomedical
+        engineering and have professional experience working with
+        medical equipment in a hospital environment.
+      </p>
+
+      <p>
+        My technical interests include medical technology, robotic
+        systems, embedded sensing, ROS 2, Unity simulation and
+        digital-twin development.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="projects">
+        <article class="card">
+          <h3>Robotic Knee Digital Twin</h3>
+
+          <p>
+            A robotic knee test platform integrating physical
+            actuators and sensors with a real-time digital twin.
+          </p>
+
+          <p class="technologies">
+            ROS 2 · Raspberry Pi · Unity · Embedded Systems
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Master's Thesis</h3>
+
+          <p>
+            Research project combining biomedical engineering,
+            simulation and advanced engineering methods.
+          </p>
+
+          <p class="technologies">
+            Research · Modelling · Medical Technology
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Hospital Medical Technology</h3>
+
+          <p>
+            Professional experience with maintenance, calibration
+            and troubleshooting of critical medical equipment.
+          </p>
+
+          <p class="technologies">
+            Clinical Engineering · Safety · Maintenance
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        I am interested in opportunities involving biomedical
+        engineering, medical devices, robotics and research and
+        development.
+      </p>
+
+      <p>
+        GitHub:
+        <a
+          href="https://github.com/WajihHabrah"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WajihHabrah
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Wajih Habrah
+  </footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Robotic Knee Digital Twin project by biomedical engineer Wajih Habrah.">
+
+    <title>
+        Clinical Engineering and Hospital Technology | Wajih Habrah
+    </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav a {
+            color: #1f2937;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        header {
+            padding: 90px 8%;
+            background: #ffffff;
+        }
+
+        header div {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .category {
+            margin-bottom: 10px;
+            color: #2563eb;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .summary {
+            max-width: 850px;
+            font-size: 1.2rem;
+            color: #4b5563;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 8%;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        .information-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .information-card {
+            padding: 22px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .information-card strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #2563eb;
+        }
+
+        .technology-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .technology-list li {
+            padding: 7px 13px;
+            background: #dbeafe;
+            border-radius: 20px;
+            color: #1e40af;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .architecture {
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border: 1px dashed #94a3b8;
+            border-radius: 10px;
+        }
+
+        .architecture-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .system-block {
+            padding: 15px 18px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            color: #2563eb;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .note {
+            padding: 20px;
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: #ffffff;
+            background: #2563eb;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #6b7280;
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">
+            <strong>Wajih Habrah</strong>
+        </a>
+
+        <a href="../index.html#projects">
+            Back to projects
+        </a>
+    </nav>
+
+    <header>
+        <div>
+            <p class="category">
+                Clinical Engineering · Medical Technology · Patient Safety
+            </p>
+
+            <h1>Clinical Engineering and Hospital Technology</h1>
+
+            <p class="summary">
+                More than five years of biomedical engineering experience in a
+                hospital environment, supporting the maintenance, calibration,
+                troubleshooting and safe operation of critical medical equipment.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Professional Overview</h2>
+
+            <p>
+                My hospital engineering experience includes working with medical
+                equipment used in intensive care, operating rooms, diagnostic
+                departments and other clinical environments.
+            </p>
+
+            <p>
+                My responsibilities included preventive maintenance, calibration,
+                technical troubleshooting, safety follow-up, documentation and
+                technical support for healthcare personnel.
+            </p>
+        </section>
+
+        <section>
+            <h2>Areas of Experience</h2>
+
+            <div class="information-grid">
+                <div class="information-card">
+                    <strong>Critical-Care Equipment</strong>
+                    Technical support and maintenance for intensive-care and
+                    life-support systems.
+                </div>
+
+                <div class="information-card">
+                    <strong>Ventilators</strong>
+                    Inspection, troubleshooting, maintenance and functional
+                    verification of respiratory equipment.
+                </div>
+
+                <div class="information-card">
+                    <strong>Mobile C-Arms</strong>
+                    Preventive maintenance procedures, technical checks and
+                    improvement of service routines.
+                </div>
+
+                <div class="information-card">
+                    <strong>Diagnostic Equipment</strong>
+                    Maintenance, calibration and fault investigation for medical
+                    diagnostic systems.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Responsibilities</h2>
+
+            <ul>
+                <li>
+                    Performed preventive and corrective maintenance of medical
+                    equipment.
+                </li>
+
+                <li>
+                    Calibrated and verified equipment according to technical and
+                    safety requirements.
+                </li>
+
+                <li>
+                    Investigated technical faults and supported the restoration of
+                    equipment to safe operation.
+                </li>
+
+                <li>
+                    Maintained service records and technical documentation.
+                </li>
+
+                <li>
+                    Supported healthcare personnel with equipment use and technical
+                    questions.
+                </li>
+
+                <li>
+                    Participated in incident reporting and equipment-safety
+                    follow-up.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Preventive-Maintenance Improvement</h2>
+
+            <p>
+                One area of my work involved reviewing and improving preventive
+                maintenance procedures for mobile C-arm systems. The objective
+                was to make technical inspections more structured, repeatable and
+                aligned with safe clinical operation.
+            </p>
+
+            <p>
+                This work strengthened my experience in combining manufacturer
+                requirements, technical measurements, service documentation and
+                practical hospital workflows.
+            </p>
+        </section>
+
+        <section>
+            <h2>Engineering Skills Demonstrated</h2>
+
+            <ul class="technology-list">
+                <li>Clinical Engineering</li>
+                <li>Medical Equipment</li>
+                <li>Preventive Maintenance</li>
+                <li>Calibration</li>
+                <li>Troubleshooting</li>
+                <li>Technical Documentation</li>
+                <li>Equipment Safety</li>
+                <li>Risk Awareness</li>
+                <li>Staff Support</li>
+                <li>Incident Follow-Up</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Confidentiality</h2>
+
+            <div class="note">
+                This page provides a general overview of my professional
+                engineering experience. Patient information, internal hospital
+                documents, equipment identifiers and confidential incident
+                details are intentionally excluded.
+            </div>
+        </section>
+
+        <a class="back-button" href="../index.html#projects">
+            ← Back to portfolio
+        </a>
+    </main>
+
+    <footer>
+        © 2026 Wajih Habrah
+    </footer>
+</body>
+
+</html>

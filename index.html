@@ -60,7 +60,26 @@
     }
 
     .hero {
-      max-width: 850px;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      min-width: 0;
+    }
+
+    .profile-photo {
+      width: 280px;
+      height: 280px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 6px solid #ffffff;
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.18);
     }
 
     .hero p:first-child {
@@ -159,6 +178,22 @@
       header {
         min-height: auto;
       }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-content {
+        order: 2;
+      }
+
+      .profile-photo {
+        width: 210px;
+        height: 210px;
+        margin: auto;
+        order: 1;
+      }
     }
   </style>
 </head>
@@ -176,33 +211,39 @@
 
   <header>
     <div class="hero">
-      <p>Biomedical Engineer</p>
+      <div class="hero-content">
+        <p>Biomedical Engineer</p>
 
-      <h1>Wajih Habrah</h1>
+        <h1>Wajih Habrah</h1>
 
-      <p class="subtitle">
-        Biomedical engineer with more than five years of experience in
-        hospital medical technology. I combine clinical engineering
-        experience with robotics, embedded systems, ROS 2, simulation
-        and digital-twin development.
-      </p>
+        <p class="subtitle">
+          Biomedical engineer with more than five years of experience in
+          hospital medical technology. I combine clinical engineering
+          experience with robotics, embedded systems, ROS 2, simulation
+          and digital-twin development.
+        </p>
 
-      <a class="button" href="#projects">
-        View my projects
-      </a>
+        <a class="button" href="#projects">
+          View my projects
+        </a>
 
-      <a class="button secondary" href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer">
-        GitHub profile
-      </a>
+        <a class="button secondary" href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer">
+          GitHub profile
+        </a>
 
-      <a class="button secondary" href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank"
-        rel="noopener noreferrer">
-        LinkedIn
-      </a>
+        <a class="button secondary" href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
 
-      <a class="button secondary" href="assets/documents/wajih-habrah-cv.pdf" download>
-        Download CV
-      </a>
+        <a class="button secondary" href="assets/documents/wajih-habrah-cv.pdf" download>
+          Download CV
+        </a>
+
+      </div>
+
+      <img class="profile-photo" src="assets/images/wajih-habrah-profile.jpg"
+        alt="Professional portrait of Wajih Habrah">
 
     </div>
   </header>

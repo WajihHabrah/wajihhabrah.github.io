@@ -234,8 +234,27 @@
     }
 
     @media (max-width: 650px) {
+      nav {
+        display: block;
+        padding: 16px 6%;
+      }
+
+      nav strong {
+        display: block;
+        margin-bottom: 12px;
+      }
+
       nav div {
-        display: none;
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+
+      nav a {
+        flex: 0 0 auto;
+        margin-left: 0;
+        font-size: 0.95rem;
       }
 
       header {

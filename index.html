@@ -198,6 +198,41 @@
       border-top: 1px solid #e5e7eb;
     }
 
+    .experience-item {
+      padding: 30px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 25px;
+      margin-bottom: 15px;
+    }
+
+    .experience-header h3 {
+      margin: 0 0 5px;
+    }
+
+    .experience-company {
+      margin: 0;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .experience-date {
+      margin: 0;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    .experience-item li {
+      margin-bottom: 10px;
+    }
+
     @media (max-width: 650px) {
       nav div {
         display: none;
@@ -222,6 +257,15 @@
         margin: auto;
         order: 1;
       }
+
+      .experience-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .experience-date {
+        white-space: normal;
+      }
     }
   </style>
 </head>
@@ -233,6 +277,7 @@
     <div>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -351,6 +396,63 @@
           </ul>
         </article>
       </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <article class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Biomedical Engineer</h3>
+
+            <p class="experience-company">
+              Södersjukhuset · Stockholm, Sweden
+            </p>
+          </div>
+
+          <p class="experience-date">
+            January 2018 – Present
+          </p>
+        </div>
+
+        <p>
+          More than five years of experience supporting medical
+          technology in a hospital environment. Full-time from 2018
+          through 2021, followed by hourly and consulting assignments.
+        </p>
+
+        <ul>
+          <li>
+            Maintained, calibrated and troubleshot medical equipment used
+            in intensive care, operating rooms and diagnostic departments.
+          </li>
+
+          <li>
+            Worked with ventilators, mobile C-arms, critical-care systems
+            and diagnostic equipment.
+          </li>
+
+          <li>
+            Improved preventive-maintenance procedures and technical
+            service documentation.
+          </li>
+
+          <li>
+            Supported healthcare personnel with equipment use, technical
+            questions and safety follow-up.
+          </li>
+
+          <li>
+            Participated in incident reporting and investigations related
+            to medical-equipment safety.
+          </li>
+        </ul>
+
+        <a href="projects/clinical-engineering-hospital-technology.html">
+          View clinical engineering experience →
+        </a>
+      </article>
     </section>
 
     <section id="education">

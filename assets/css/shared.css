@@ -68,6 +68,13 @@ a:hover {
   color: var(--primary-dark);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 section {
   max-width: 1100px;
   margin: auto;
@@ -171,4 +178,17 @@ nav a:hover {
   color: var(--primary);
   font-size: 0.9rem;
   font-weight: bold;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

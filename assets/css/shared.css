@@ -1,0 +1,14 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+
+  --text: #1f2937;
+  --text-muted: #6b7280;
+
+  --background: #f8fafc;
+  --surface: #ffffff;
+
+  --border: #e5e7eb;
+
+  --soft-blue: #eff6ff;
+}

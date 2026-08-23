@@ -76,11 +76,20 @@ section {
 }
 
 footer {
-  padding: 30px;
+  padding: 30px 8%;
   text-align: center;
   color: var(--text-muted);
   background: var(--surface);
   border-top: 1px solid var(--border);
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 8px;
+  text-decoration: none;
 }
 
 nav {

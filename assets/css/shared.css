@@ -12,3 +12,47 @@
 
   --soft-blue: #eff6ff;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 8%;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: var(--text-muted);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}

@@ -16,6 +16,21 @@
     </title>
 
     <style>
+        :root {
+            --primary: var(--primary);
+            --primary-dark: #1e40af;
+
+            --text: var(--text);
+            --text-muted: var(--text-muted);
+
+            --background: var(--background);
+            --surface: var(--surface);
+
+            --border: var(--border);
+
+            --soft-blue: #eff6ff;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -28,8 +43,8 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.7;
-            color: #1f2937;
-            background: #f8fafc;
+            color: var(--text);
+            background: var(--background);
         }
 
         nav {
@@ -37,22 +52,22 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
 
         nav a {
-            color: #1f2937;
+            color: var(--text);
             text-decoration: none;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: var(--primary);
         }
 
         header {
             padding: 90px 8%;
-            background: #ffffff;
+            background: var(--surface);
         }
 
         header div {
@@ -62,7 +77,7 @@
 
         .category {
             margin-bottom: 10px;
-            color: #2563eb;
+            color: var(--primary);
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -104,15 +119,15 @@
 
         .information-card {
             padding: 22px;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 10px;
         }
 
         .information-card strong {
             display: block;
             margin-bottom: 8px;
-            color: #2563eb;
+            color: var(--primary);
         }
 
         .technology-list {
@@ -127,7 +142,7 @@
             padding: 7px 13px;
             background: #dbeafe;
             border-radius: 20px;
-            color: #1e40af;
+            color: var(--primary-dark);
             font-size: 0.9rem;
             font-weight: bold;
         }
@@ -135,7 +150,7 @@
         .architecture {
             padding: 30px;
             text-align: center;
-            background: #ffffff;
+            background: var(--surface);
             border: 1px dashed #94a3b8;
             border-radius: 10px;
         }
@@ -151,14 +166,14 @@
 
         .system-block {
             padding: 15px 18px;
-            background: #eff6ff;
+            background: var(--soft-blue);
             border: 1px solid #bfdbfe;
             border-radius: 8px;
             font-weight: bold;
         }
 
         .arrow {
-            color: #2563eb;
+            color: var(--primary);
             font-size: 1.5rem;
             font-weight: bold;
         }
@@ -172,8 +187,8 @@
         .back-button {
             display: inline-block;
             padding: 12px 20px;
-            color: #ffffff;
-            background: #2563eb;
+            color: var(--surface);
+            background: var(--primary);
             border-radius: 6px;
             text-decoration: none;
         }
@@ -181,9 +196,9 @@
         footer {
             padding: 30px;
             text-align: center;
-            color: #6b7280;
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
+            color: var(--text-muted);
+            background: var(--surface);
+            border-top: 1px solid var(--border);
         }
     </style>
 

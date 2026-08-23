@@ -14,6 +14,21 @@
   <title>Wajih Habrah | Biomedical Engineer</title>
 
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+
+      --text: #1f2937;
+      --text-muted: #6b7280;
+
+      --background: var(--background);
+      --surface: #ffffff;
+
+      --border: #e5e7eb;
+
+      --soft-blue: #eff6ff;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -26,8 +41,8 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      color: #1f2937;
-      background: #f8fafc;
+      color: var(--text);
+      background: var(--background);
     }
 
     nav {
@@ -35,7 +50,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 8%;
-      background: #ffffff;
+      background: var(--surface);
       border-bottom: 1px solid #e5e7eb;
     }
 
@@ -45,12 +60,12 @@
 
     nav a {
       margin-left: 20px;
-      color: #1f2937;
+      color: var(--text);
       text-decoration: none;
     }
 
     nav a:hover {
-      color: #2563eb;
+      color: var(--primary);
     }
 
     header {
@@ -58,7 +73,7 @@
       display: flex;
       align-items: center;
       padding: 80px 8%;
-      background: #ffffff;
+      background: var(--surface);
     }
 
     .hero {
@@ -85,7 +100,7 @@
     }
 
     .hero p:first-child {
-      color: #2563eb;
+      color: var(--primary);
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -114,13 +129,13 @@
       margin-right: 10px;
       padding: 12px 22px;
       color: #ffffff;
-      background: #2563eb;
+      background: var(--primary);
       border-radius: 6px;
       text-decoration: none;
     }
 
     .button.secondary {
-      color: #2563eb;
+      color: var(--primary);
       background: transparent;
       border: 1px solid #2563eb;
     }
@@ -140,14 +155,14 @@
 
     .skill-group {
       padding: 25px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 10px;
     }
 
     .skill-group h3 {
       margin-top: 0;
-      color: #2563eb;
+      color: var(--primary);
     }
 
     .skill-group ul {
@@ -168,8 +183,8 @@
 
     .card {
       padding: 25px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 10px;
     }
 
@@ -187,7 +202,7 @@
     }
 
     .technologies {
-      color: #2563eb;
+      color: var(--primary);
       font-size: 0.9rem;
       font-weight: bold;
     }
@@ -195,15 +210,15 @@
     footer {
       padding: 30px;
       text-align: center;
-      color: #6b7280;
-      background: #ffffff;
+      color: var(--text-muted);
+      background: var(--surface);
       border-top: 1px solid #e5e7eb;
     }
 
     .experience-item {
       padding: 30px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 10px;
     }
 
@@ -221,13 +236,13 @@
 
     .experience-company {
       margin: 0;
-      color: #2563eb;
+      color: var(--primary);
       font-weight: bold;
     }
 
     .experience-date {
       margin: 0;
-      color: #6b7280;
+      color: var(--text-muted);
       white-space: nowrap;
     }
 

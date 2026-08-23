@@ -176,6 +176,31 @@
             text-align: center;
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-caption {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
         .note {
             padding: 20px;
             background: #fffbeb;
@@ -261,6 +286,23 @@
                     Robotic Phantom Knee platform and its digital-twin development.
                 </figcaption>
             </figure>
+        </section>
+
+        <section>
+            <h2>Project Demonstration Video</h2>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/lWRFAtuQzvM"
+                    title="Robotic Phantom Knee Master's Thesis Project"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <p class="video-caption">
+                Demonstration of the Robotic Phantom Knee platform, including
+                system operation, hardware integration, control, testing and
+                digital-twin functionality.
+            </p>
         </section>
 
         <section>

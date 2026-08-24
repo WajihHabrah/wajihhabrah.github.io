@@ -494,6 +494,34 @@
         </section>
 
         <section>
+            <h2>ROS 2 Control & Communication</h2>
+
+            <p>
+                A Raspberry Pi 5 running Ubuntu and ROS 2 Jazzy serves as the
+                central computing and communication platform of the robotic
+                phantom knee. ROS 2 provides the middleware used to organize
+                actuator control, embedded sensing and communication with the
+                Unity-based digital environment.
+            </p>
+
+            <p>
+                Dedicated ROS 2 nodes separate the main subsystem functions,
+                including communication with the robotic actuators, acquisition
+                of embedded sensor data and control of other physical components.
+                This modular structure allows individual subsystems to be
+                developed and tested independently before being integrated into
+                the complete platform.
+            </p>
+
+            <p>
+                During operation, commands and feedback are exchanged through the
+                ROS 2 communication pipeline, enabling actuator states and sensor
+                measurements to be made available to other nodes and to the
+                digital-twin interface in real time.
+            </p>
+        </section>
+
+        <section>
             <h2>Technologies</h2>
 
             <ul class="technology-list">

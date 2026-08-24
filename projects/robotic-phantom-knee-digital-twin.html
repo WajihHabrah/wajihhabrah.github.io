@@ -360,17 +360,23 @@
             <h2>System Architecture</h2>
 
             <p>
-                The system follows a bidirectional physical–digital architecture.
-                A Raspberry Pi 5 running Ubuntu and ROS 2 acts as the central
-                integration platform between the Unity-based digital twin and the
-                physical robotic phantom knee.
+                The platform uses a bidirectional physical–digital architecture in
+                which a Raspberry Pi 5 running Ubuntu and ROS 2 Jazzy acts as the
+                central integration layer between the Unity-based digital twin and
+                the physical robotic knee.
             </p>
 
             <p>
-                Dedicated ROS 2 nodes manage actuator communication, pneumatic
-                control, embedded sensor acquisition and application-level control,
-                while the ROS–TCP interface enables real-time communication with
-                the Unity environment.
+                Dedicated ROS 2 nodes manage communication with the robotic
+                actuators, embedded sensor modules and pneumatic subsystem, while
+                the ROS–Unity interface exchanges commands and system-state data
+                with the digital environment.
+            </p>
+
+            <p>
+                This architecture separates hardware-level communication from the
+                interactive digital representation while allowing the physical and
+                virtual systems to remain synchronized during operation and testing.
             </p>
 
             <figure class="zoomable-figure">

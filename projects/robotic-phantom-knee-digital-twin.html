@@ -156,16 +156,47 @@
         </section>
 
         <section>
-            <h2>Project Overview Image</h2>
+            <h2>Robotic Phantom Knee System Overview</h2>
 
-            <figure>
-                <img class="project-image" src="../assets/images/projects/robotic-phantom-knee-overview.png"
-                    alt="Overview of the Robotic Phantom Knee Digital Twin project">
+            <p>
+                The robotic phantom knee integrates the mechanical joint structure,
+                antagonistic robotic actuation, a variable-stiffness mechanism,
+                pneumatic components, embedded electronics and sensing hardware
+                within a single physical platform.
+            </p>
+
+            <figure class="zoomable-figure">
+
+                <button class="image-zoom-trigger" type="button" data-image-dialog="platform-overview-dialog"
+                    aria-label="Open a larger view of the robotic phantom knee system">
+
+                    <img class="project-image" src="../assets/images/projects/robotic-phantom-knee-overview.png"
+                        alt="Transparent rendering of the Robotic Phantom Knee showing its internal mechanical, robotic, pneumatic and electronic components">
+
+                    <span class="zoom-hint">
+                        View larger ↗
+                    </span>
+
+                </button>
 
                 <figcaption class="image-caption">
-                    Robotic Phantom Knee platform and its digital-twin development.
+                    Transparent system rendering showing the integrated mechanical,
+                    robotic, pneumatic and electronic components of the Robotic Phantom Knee.
                 </figcaption>
+
             </figure>
+
+            <dialog class="image-dialog" id="platform-overview-dialog">
+
+                <button class="dialog-close" type="button" data-dialog-close
+                    aria-label="Close enlarged system overview image">
+                    ×
+                </button>
+
+                <img class="dialog-image" src="../assets/images/projects/robotic-phantom-knee-overview.png"
+                    alt="Enlarged transparent rendering of the Robotic Phantom Knee and its internal components">
+
+            </dialog>
         </section>
 
         <section>

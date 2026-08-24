@@ -288,3 +288,19 @@ main {
 .dialog-close:hover {
     background: var(--soft-blue);
 }
+
+/* =========================
+   Contribution List
+   ========================= */
+
+.contribution-list {
+    padding-left: 22px;
+}
+
+.contribution-list li {
+    margin-bottom: 14px;
+}
+
+.contribution-list strong {
+    color: var(--primary-dark);
+}

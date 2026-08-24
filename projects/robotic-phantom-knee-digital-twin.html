@@ -368,29 +368,30 @@
         <section>
             <h2>System Architecture</h2>
 
-            <div class="architecture">
-                <p>
-                    Simplified communication structure
-                </p>
+            <p>
+                The system follows a bidirectional physical–digital architecture.
+                A Raspberry Pi 5 running Ubuntu and ROS 2 acts as the central
+                integration platform between the Unity-based digital twin and the
+                physical robotic phantom knee.
+            </p>
 
-                <div class="architecture-flow">
-                    <div class="system-block">
-                        Actuators and Sensors
-                    </div>
+            <p>
+                Dedicated ROS 2 nodes manage actuator communication, pneumatic
+                control, embedded sensor acquisition and application-level control,
+                while the ROS–TCP interface enables real-time communication with
+                the Unity environment.
+            </p>
 
-                    <div class="arrow">↔</div>
+            <figure>
+                <img class="project-image" src="../assets/images/projects/robotic-phantom-knee-system-architecture.png"
+                    alt="System architecture of the Robotic Phantom Knee Digital Twin showing bidirectional communication between Unity, Raspberry Pi running Ubuntu and ROS 2, and the physical robotic knee platform">
 
-                    <div class="system-block">
-                        Raspberry Pi and ROS 2
-                    </div>
-
-                    <div class="arrow">↔</div>
-
-                    <div class="system-block">
-                        Unity Digital Twin
-                    </div>
-                </div>
-            </div>
+                <figcaption class="image-caption">
+                    System communication architecture of the Robotic Phantom Knee
+                    Digital Twin, connecting the Unity environment, ROS 2 middleware
+                    on Raspberry Pi 5 and the physical robotic platform.
+                </figcaption>
+            </figure>
         </section>
 
         <section>

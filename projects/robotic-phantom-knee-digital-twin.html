@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../assets/css/shared.css">
 
+    <link rel="stylesheet" href="../assets/css/project.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
@@ -382,16 +384,40 @@
                 the Unity environment.
             </p>
 
-            <figure>
-                <img class="project-image" src="../assets/images/projects/robotic-phantom-knee-system-architecture.png"
-                    alt="System architecture of the Robotic Phantom Knee Digital Twin showing bidirectional communication between Unity, Raspberry Pi running Ubuntu and ROS 2, and the physical robotic knee platform">
+            <figure class="zoomable-figure">
+
+                <button class="image-zoom-trigger" id="open-architecture-image" type="button"
+                    aria-label="Open a larger view of the system architecture">
+
+                    <img class="project-image"
+                        src="../assets/images/projects/robotic-phantom-knee-system-architecture.png"
+                        alt="System architecture of the Robotic Phantom Knee Digital Twin showing bidirectional communication between Unity, Raspberry Pi running Ubuntu and ROS 2, and the physical robotic knee platform">
+
+                    <span class="zoom-hint">
+                        View larger ↗
+                    </span>
+
+                </button>
 
                 <figcaption class="image-caption">
                     System communication architecture of the Robotic Phantom Knee
                     Digital Twin, connecting the Unity environment, ROS 2 middleware
                     on Raspberry Pi 5 and the physical robotic platform.
                 </figcaption>
+
             </figure>
+
+            <dialog class="image-dialog" id="architecture-image-dialog">
+
+                <button class="dialog-close" id="close-architecture-image" type="button"
+                    aria-label="Close enlarged architecture image">
+                    ×
+                </button>
+
+                <img class="dialog-image" src="../assets/images/projects/robotic-phantom-knee-system-architecture.png"
+                    alt="Enlarged system architecture of the Robotic Phantom Knee Digital Twin">
+
+            </dialog>
         </section>
 
         <section>

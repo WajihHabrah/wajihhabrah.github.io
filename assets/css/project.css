@@ -1,0 +1,171 @@
+/* =========================
+   Project Page Layout
+   ========================= */
+
+header {
+    padding: 90px 8%;
+    background: var(--surface);
+}
+
+header > div {
+    max-width: 950px;
+    margin: auto;
+}
+
+.category {
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.summary {
+    max-width: 850px;
+    font-size: 1.2rem;
+    color: #4b5563;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 8%;
+}
+
+
+/* =========================
+   Information Cards
+   ========================= */
+
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
+}
+
+.information-card {
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.information-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+
+/* =========================
+   Technology Tags
+   ========================= */
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.technology-list li {
+    padding: 7px 13px;
+    background: #dbeafe;
+    border-radius: 20px;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Project Images
+   ========================= */
+
+.project-image {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* =========================
+   Video
+   ========================= */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    background: #000000;
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.video-caption {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* =========================
+   Notes
+   ========================= */
+
+.note {
+    padding: 20px;
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+.back-button {
+    display: inline-block;
+    padding: 12px 20px;
+
+    color: var(--surface);
+    background: var(--primary);
+
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: var(--surface);
+    background: var(--primary-dark);
+}

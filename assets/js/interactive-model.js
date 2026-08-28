@@ -50,6 +50,13 @@ function initializeViewer() {
         document.getElementById(
             "model-interaction-hint"
         );
+    
+    const controlsPrompt =
+    interactionHint
+        ? interactionHint.querySelector(
+            ".model-controls-prompt"
+        )
+        : null;
 
     const prefersReducedMotion =
         window.matchMedia(
@@ -64,6 +71,12 @@ function initializeViewer() {
 
     let pointerStartX = 0;
     let pointerStartY = 0;
+    let pointerIsDown = false;
+
+    let introPromptStartTime = 0;
+    let previousIntroWiggleOffset = 0;
+
+    const cameraUpAxis = new THREE.Vector3(0, 1, 0);
 
     const camera = new THREE.PerspectiveCamera(
         40,
@@ -92,16 +105,48 @@ function initializeViewer() {
     renderer.domElement.addEventListener(
     "pointerdown",
     (event) => {
-        stopIntroMotion();
+        pointerIsDown = true;
 
         pointerStartX = event.clientX;
         pointerStartY = event.clientY;
     }
+);
+
+    renderer.domElement.addEventListener(
+        "pointermove",
+        (event) => {
+            if (
+                !pointerIsDown ||
+                userHasInteracted
+            ) {
+                return;
+            }
+
+            const movementDistance =
+                Math.hypot(
+                    event.clientX - pointerStartX,
+                    event.clientY - pointerStartY
+                );
+
+            if (movementDistance > 4) {
+                stopIntroMotion();
+            }
+        }
     );
 
     renderer.domElement.addEventListener(
         "pointerup",
-        selectPartFromPointer
+        (event) => {
+            pointerIsDown = false;
+            selectPartFromPointer(event);
+        }
+    );
+
+    renderer.domElement.addEventListener(
+        "pointercancel",
+        () => {
+            pointerIsDown = false;
+        }
     );
 
     renderer.domElement.addEventListener(
@@ -163,7 +208,7 @@ function initializeViewer() {
     orbitControls.enableDamping = true;
     orbitControls.dampingFactor = 0.06;
     orbitControls.autoRotate = false;
-    orbitControls.autoRotateSpeed = 0.8;
+    orbitControls.autoRotateSpeed = 1.65;
 
     const viewerObserver =
         new IntersectionObserver(
@@ -638,6 +683,123 @@ function updatePartAnimation(time) {
     }
     }
 
+    function getIntroWiggleOffset(elapsedTime) {
+        const frame = (elapsedTime / 5000) * 38;
+
+        if (frame <= 5) {
+            const progress = frame / 5;
+            const smoothProgress =
+                progress * progress * (3 - 2 * progress);
+
+            return THREE.MathUtils.lerp(
+                0,
+                -1,
+                smoothProgress
+            );
+        }
+
+        if (frame <= 6) {
+            return -1;
+        }
+
+        if (frame <= 14) {
+            const progress = (frame - 6) / 8;
+            const smoothProgress =
+                progress * progress * (3 - 2 * progress);
+
+            return THREE.MathUtils.lerp(
+                -1,
+                1,
+                smoothProgress
+            );
+        }
+
+        if (frame <= 15) {
+            return 1;
+        }
+
+        if (frame <= 20) {
+            const progress = (frame - 15) / 5;
+            const smoothProgress =
+                progress * progress * (3 - 2 * progress);
+
+            return THREE.MathUtils.lerp(
+                1,
+                0,
+                smoothProgress
+            );
+        }
+
+        return 0;
+    }
+
+
+    function applyIntroWiggle(currentTime) {
+        const promptIsVisible =
+            interactionHint &&
+            interactionHint.classList.contains(
+                "is-visible"
+            );
+
+        let nextOffset = 0;
+
+        if (
+            promptIsVisible &&
+            !userHasInteracted &&
+            introPromptStartTime > 0
+        ) {
+            const elapsedTime =
+                currentTime - introPromptStartTime;
+
+            const loopedElapsedTime =
+                elapsedTime % 5000;
+
+            nextOffset =
+                getIntroWiggleOffset(
+                    loopedElapsedTime
+                );
+        }
+
+        /*
+        * Move the hand by 5% of the viewer width,
+        * matching the original model-viewer prompt.
+        */
+        if (controlsPrompt) {
+            const handOffset =
+                nextOffset *
+                container.clientWidth *
+                0.05;
+
+            controlsPrompt.style.transform =
+                `translateX(${handOffset}px)`;
+        }
+
+        /*
+        * Apply the exact same offset to the camera.
+        */
+        const angleChange =
+            (previousIntroWiggleOffset - nextOffset) *
+            (Math.PI / 16);
+
+        if (Math.abs(angleChange) > 0.000001) {
+            const cameraOffset =
+                camera.position
+                    .clone()
+                    .sub(orbitControls.target);
+
+            cameraOffset.applyAxisAngle(
+                cameraUpAxis,
+                angleChange
+            );
+
+            camera.position
+                .copy(orbitControls.target)
+                .add(cameraOffset);
+        }
+
+        previousIntroWiggleOffset = nextOffset;
+    }
+    
     function updateIntroMotion() {
         const shouldRun =
             modelIsReady &&
@@ -647,34 +809,28 @@ function updatePartAnimation(time) {
 
         orbitControls.autoRotate = shouldRun;
 
-        if (
-            shouldRun &&
-            interactionHint &&
-            !hintHasBeenShown
-        ) {
-            hintHasBeenShown = true;
+        if (shouldRun && interactionHint) {
+            const promptWasHidden =
+                !interactionHint.classList.contains(
+                    "is-visible"
+                );
+
+            if (promptWasHidden) {
+                introPromptStartTime =
+                    performance.now();
+
+                previousIntroWiggleOffset = 0;
+            }
 
             interactionHint.classList.add(
                 "is-visible"
             );
-
-            hintTimer = window.setTimeout(
-                () => {
-                    interactionHint.classList.remove(
-                        "is-visible"
-                    );
-                },
-                4500
-            );
-        }
-
-        if (!viewerIsVisible && interactionHint) {
+        } else if (interactionHint) {
             interactionHint.classList.remove(
                 "is-visible"
             );
         }
     }
-
 
     function stopIntroMotion() {
         userHasInteracted = true;
@@ -891,6 +1047,7 @@ function setSelectedPart(part) {
     function render(time) {
         updatePartAnimation(time);
         updateResetAnimation(time);
+        applyIntroWiggle(time);
         orbitControls.update();
 
         if (selectionHelper) {

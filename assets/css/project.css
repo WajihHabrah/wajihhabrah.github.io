@@ -216,6 +216,59 @@ main {
     border-radius: inherit;
 }
 
+.model-interaction-hint {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 14px;
+
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.82);
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+.model-interaction-hint.is-visible {
+    opacity: 1;
+}
+
+.gesture-hand {
+    display: inline-block;
+    font-size: 1.5rem;
+
+    animation:
+        model-drag-guidance
+        1.4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes model-drag-guidance {
+    0%,
+    100% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+}
+
 @media (max-width: 600px) {
     .selected-part-name {
         width: 100%;

@@ -45,6 +45,22 @@ function initializeViewer() {
 
     const selectedPartName =
         document.getElementById("selected-part-name");
+    
+    const interactionHint =
+        document.getElementById(
+            "model-interaction-hint"
+        );
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+    let modelIsReady = false;
+    let viewerIsVisible = false;
+    let userHasInteracted = false;
+    let hintHasBeenShown = false;
+    let hintTimer = null;
 
     let pointerStartX = 0;
     let pointerStartY = 0;
@@ -76,6 +92,8 @@ function initializeViewer() {
     renderer.domElement.addEventListener(
     "pointerdown",
     (event) => {
+        stopIntroMotion();
+
         pointerStartX = event.clientX;
         pointerStartY = event.clientY;
     }
@@ -85,6 +103,22 @@ function initializeViewer() {
         "pointerup",
         selectPartFromPointer
     );
+
+    renderer.domElement.addEventListener(
+        "wheel",
+        stopIntroMotion,
+        { passive: true }
+    );
+
+    const modelToolbar =
+        document.querySelector(".model-toolbar");
+
+    if (modelToolbar) {
+        modelToolbar.addEventListener(
+            "pointerdown",
+            stopIntroMotion
+        );
+    }
 
 
     /* Environment lighting */
@@ -128,6 +162,23 @@ function initializeViewer() {
 
     orbitControls.enableDamping = true;
     orbitControls.dampingFactor = 0.06;
+    orbitControls.autoRotate = false;
+    orbitControls.autoRotateSpeed = 0.8;
+
+    const viewerObserver =
+        new IntersectionObserver(
+            (entries) => {
+                viewerIsVisible =
+                    entries[0].isIntersecting;
+
+                updateIntroMotion();
+            },
+            {
+                threshold: 0.45
+            }
+        );
+
+    viewerObserver.observe(container);
 
     let activeTransformMode = "select";
 
@@ -252,6 +303,9 @@ function initializeViewer() {
             if (loadingMessage) {
                 loadingMessage.hidden = true;
             }
+
+            modelIsReady = true;
+            updateIntroMotion();
         },
 
         (progress) => {
@@ -584,6 +638,59 @@ function updatePartAnimation(time) {
     }
     }
 
+    function updateIntroMotion() {
+        const shouldRun =
+            modelIsReady &&
+            viewerIsVisible &&
+            !userHasInteracted &&
+            !prefersReducedMotion;
+
+        orbitControls.autoRotate = shouldRun;
+
+        if (
+            shouldRun &&
+            interactionHint &&
+            !hintHasBeenShown
+        ) {
+            hintHasBeenShown = true;
+
+            interactionHint.classList.add(
+                "is-visible"
+            );
+
+            hintTimer = window.setTimeout(
+                () => {
+                    interactionHint.classList.remove(
+                        "is-visible"
+                    );
+                },
+                4500
+            );
+        }
+
+        if (!viewerIsVisible && interactionHint) {
+            interactionHint.classList.remove(
+                "is-visible"
+            );
+        }
+    }
+
+
+    function stopIntroMotion() {
+        userHasInteracted = true;
+        orbitControls.autoRotate = false;
+
+        if (hintTimer) {
+            window.clearTimeout(hintTimer);
+            hintTimer = null;
+        }
+
+        if (interactionHint) {
+            interactionHint.classList.remove(
+                "is-visible"
+            );
+        }
+    }
 
     function resetModel() {
     if (!loadedModel) {

@@ -1,0 +1,55 @@
+<!--
+  Interaction prompt based on Google model-viewer's controls prompt.
+  Copyright 2019 Google LLC. Licensed under Apache-2.0.
+  https://github.com/google/model-viewer
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 25 36"
+    width="25"
+    height="36"
+    aria-hidden="true">
+
+    <circle
+        cx="11.25"
+        cy="11.8"
+        r="9.2"
+        fill="#e4e4e4"
+        fill-opacity="0.55"/>
+
+    <circle
+        cx="11.25"
+        cy="11.8"
+        r="9.2"
+        fill="none"
+        stroke="#000000"
+        stroke-opacity="0.08"
+        stroke-width="1"/>
+
+    <path
+        d="M22.444 24.94
+           16.187 21.066
+           A1.45 1.45 0 0 0 15.43 20.855
+           H12.477
+           V10.975
+           C12.477 10.312 11.861 9.772 11.104 9.772
+           S9.734 10.312 9.734 10.975
+           V27.618
+           L4.812 26.624
+           A3.44 3.44 0 0 0 4.12 26.555
+           A3.35 3.35 0 0 0 2.195 27.153
+           C2.048 27.255 1.997 27.351 2.001 27.451
+           C2.005 27.545 2.059 27.627 2.154 27.681
+           C4.616 29.129 6.671 30.901 8.264 32.951
+           C9.151 34.091 10.637 34.771 12.244 34.771
+           H18.93
+           C19.507 34.771 20.01 34.445 20.183 33.971
+           L22.943 26.231
+           C23.103 25.783 22.926 25.308 22.517 25.011
+           C22.492 24.991 22.474 24.968 22.444 24.94
+           Z"
+        fill="#ffffff"
+        stroke="#000000"
+        stroke-opacity="0.42"
+        stroke-width="0.75"
+        stroke-linejoin="round"/>
+</svg>

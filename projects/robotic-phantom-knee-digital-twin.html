@@ -12,6 +12,9 @@
 
     <script src="../assets/js/project.js" defer></script>
 
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
@@ -197,6 +200,31 @@
                     alt="Enlarged transparent rendering of the Robotic Phantom Knee and its internal components">
 
             </dialog>
+        </section>
+
+        <section>
+            <h2>Interactive 3D Model</h2>
+
+            <p>
+                Explore the three-dimensional model of the Robotic Phantom Knee.
+                Drag to rotate the model, scroll to zoom and inspect the integrated
+                mechanical structure from different perspectives.
+            </p>
+
+            <figure class="interactive-model-figure">
+
+                <model-viewer class="interactive-model" src="../assets/models/robotic-phantom-knee.glb"
+                    alt="Interactive 3D model of the Robotic Phantom Knee" camera-controls touch-action="pan-y"
+                    auto-rotate rotation-per-second="10deg" shadow-intensity="1" exposure="1" interaction-prompt="auto"
+                    loading="lazy">
+                </model-viewer>
+
+                <figcaption class="image-caption">
+                    Interactive model of the Robotic Phantom Knee. Drag to rotate
+                    and scroll or pinch to zoom.
+                </figcaption>
+
+            </figure>
         </section>
 
         <section>

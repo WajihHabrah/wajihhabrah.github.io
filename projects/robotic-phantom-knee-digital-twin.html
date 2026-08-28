@@ -12,8 +12,16 @@
 
     <script src="../assets/js/project.js" defer></script>
 
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
     </script>
+
+    <script type="module" src="../assets/js/interactive-model.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -213,15 +221,58 @@
 
             <figure class="interactive-model-figure">
 
-                <model-viewer class="interactive-model" src="../assets/models/robotic-phantom-knee.glb"
-                    alt="Interactive 3D model of the Robotic Phantom Knee" camera-controls touch-action="pan-y"
-                    auto-rotate rotation-per-second="10deg" shadow-intensity="1" exposure="1" interaction-prompt="auto"
-                    loading="lazy">
-                </model-viewer>
+                <div class="interactive-model-shell">
+
+                    <div class="model-toolbar" role="toolbar" aria-label="3D model controls">
+
+                        <button class="model-tool is-active" type="button" data-transform-mode="select"
+                            aria-pressed="true">
+                            Select
+                        </button>
+
+                        <button class="model-tool" type="button" data-transform-mode="translate" aria-pressed="false">
+                            Move
+                        </button>
+
+                        <button class="model-tool" type="button" data-transform-mode="rotate" aria-pressed="false">
+                            Rotate
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="explode">
+                            Explode
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="hide" disabled>
+                            Hide Part
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="show-all">
+                            Show All
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="reset">
+                            Reset
+                        </button>
+
+                        <span class="selected-part-name" id="selected-part-name" aria-live="polite">
+                            No part selected
+                        </span>
+
+                    </div>
+
+                    <div class="interactive-model" id="interactive-model"
+                        aria-label="Interactive 3D model of the Robotic Phantom Knee">
+                    </div>
+
+                    <div class="model-loading" id="model-loading" role="status">
+                        Loading 3D model…
+                    </div>
+
+                </div>
 
                 <figcaption class="image-caption">
-                    Interactive model of the Robotic Phantom Knee. Drag to rotate
-                    and scroll or pinch to zoom.
+                    Click a component to select it. Use Move or Rotate to manipulate
+                    the selected part, or Explode to inspect the complete assembly.
                 </figcaption>
 
             </figure>

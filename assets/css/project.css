@@ -300,15 +300,15 @@ main {
    ========================= */
 
 .project-cta {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    gap: 32px;
     margin: 60px auto 40px;
     padding: 40px;
     background: var(--soft-blue);
     border: 1px solid #dbeafe;
     border-radius: var(--radius);
+}
+
+.project-cta-copy {
+    max-width: 720px;
 }
 
 .project-cta .category {
@@ -331,7 +331,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: 24px;
 }
 
 .project-cta-actions .button {
@@ -339,14 +340,19 @@ main {
     white-space: nowrap;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .project-cta {
-        grid-template-columns: 1fr;
-        padding: 30px;
+        padding: 28px 22px;
     }
 
     .project-cta-actions {
-        justify-content: flex-start;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-cta-actions .button {
+        width: 100%;
+        text-align: center;
     }
 }
 

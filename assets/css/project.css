@@ -296,6 +296,61 @@ main {
 }
 
 /* =========================
+   Project Closing CTA
+   ========================= */
+
+.project-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 32px;
+    margin: 60px auto 40px;
+    padding: 40px;
+    background: var(--soft-blue);
+    border: 1px solid #dbeafe;
+    border-radius: var(--radius);
+}
+
+.project-cta .category {
+    margin: 0 0 8px;
+}
+
+.project-cta h2 {
+    margin: 0 0 16px;
+}
+
+.project-cta p {
+    margin: 0 0 12px;
+}
+
+.project-cta p:last-child {
+    margin-bottom: 0;
+}
+
+.project-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.project-cta-actions .button {
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    .project-cta {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .project-cta-actions {
+        justify-content: flex-start;
+    }
+}
+
+/* =========================
    Technology Tags
    ========================= */
 

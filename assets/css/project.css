@@ -103,6 +103,53 @@ main {
     color: var(--primary);
 }
 
+/* =========================
+   Technical Training Records
+   ========================= */
+
+.training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 28px;
+}
+
+.training-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--primary);
+}
+
+.training-card p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+}
+
+.training-date {
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: 14px;
+    padding: 4px 10px;
+    color: var(--primary-dark);
+    background: var(--soft-blue);
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.document-link {
+    align-self: flex-start;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.document-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* =========================
    Technology Tags

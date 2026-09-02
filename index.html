@@ -17,7 +17,7 @@
 
   <style>
     nav div a {
-      margin-left: 20px;
+      margin-inline-start: 20px;
     }
 
     header {
@@ -97,7 +97,7 @@
 
     .skill-group ul {
       margin-bottom: 0;
-      padding-left: 20px;
+      padding-inline-start: 20px;
     }
 
     .skill-group li {
@@ -213,6 +213,10 @@
 
   <meta property="og:type" content="website">
 
+  <meta property="og:locale" content="en_US">
+
+  <meta property="og:locale:alternate" content="ar_AR">
+
   <meta property="og:title" content="Wajih Habrah | Biomedical Engineer">
 
   <meta property="og:description"
@@ -226,12 +230,19 @@
 
   <link rel="canonical" href="https://wajihhabrah.github.io/">
 
+  <link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/">
+
+  <link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/">
+
+  <link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Wajih Habrah",
     "url": "https://wajihhabrah.github.io/",
+    "inLanguage": "en",
     "image": "https://wajihhabrah.github.io/assets/images/wajih-habrah-profile.jpg",
     "jobTitle": "Biomedical Engineer",
     "email": "mailto:wajih.habrah@hotmail.com",
@@ -270,6 +281,8 @@
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a class="language-link" href="ar/index.html" lang="ar" dir="rtl"
+        aria-label="View this portfolio in Arabic">العربية</a>
     </div>
   </nav>
 

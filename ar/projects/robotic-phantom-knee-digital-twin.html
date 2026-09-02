@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+    <link rel="stylesheet" href="../../assets/css/shared.css">
+    <link rel="stylesheet" href="../../assets/css/project.css">
+    <script src="../../assets/js/project.js" defer></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="../../assets/js/interactive-model.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="مشروع رسالة الماجستير لـ Wajih Habrah: تطوير منصة ركبة روبوتية محاكية تجمع بين التشغيل المتضاد والاستشعار المضمن وROS 2 وتوأم رقمي مبني باستخدام Unity.">
+
+    <title>رسالة الماجستير: التوأم الرقمي لنموذج الركبة الروبوتية المحاكية | Wajih Habrah</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="التوأم الرقمي لنموذج الركبة الروبوتية المحاكية | Wajih Habrah">
+    <meta property="og:description"
+        content="مشروع ماجستير لتطوير منصة اختبار للركبة الروبوتية المحاكية باستخدام التشغيل المتضاد والاستشعار المضمن وROS 2 وتوأم رقمي في Unity.">
+    <meta property="og:url"
+        content="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html">
+    <meta property="og:image"
+        content="https://wajihhabrah.github.io/assets/images/projects/robotic-phantom-knee-overview.png">
+    <meta property="og:image:alt" content="منصة الركبة الروبوتية المحاكية ومكوّناتها الداخلية">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="التوأم الرقمي لنموذج الركبة الروبوتية المحاكية | Wajih Habrah">
+    <meta name="twitter:description"
+        content="منصة فيزيائية–رقمية لاختبار مفاهيم الهياكل الخارجية وروبوتات إعادة التأهيل.">
+
+    <link rel="canonical"
+        href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html">
+    <link rel="alternate" hreflang="ar"
+        href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html">
+    <link rel="alternate" hreflang="en"
+        href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html">
+    <link rel="alternate" hreflang="x-default"
+        href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Thesis",
+        "name": "التوأم الرقمي لنموذج الركبة الروبوتية المحاكية",
+        "url": "https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Person",
+          "name": "Wajih Habrah",
+          "url": "https://wajihhabrah.github.io/ar/"
+        },
+        "sourceOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "Chalmers University of Technology"
+        },
+        "inSupportOf": "ماجستير في الهندسة الطبية الحيوية",
+        "about": [
+          "الهندسة الطبية الحيوية",
+          "الروبوتات",
+          "التوائم الرقمية",
+          "ROS 2",
+          "الأنظمة المضمنة",
+          "تقنيات إعادة التأهيل"
+        ],
+        "image": "https://wajihhabrah.github.io/assets/images/projects/robotic-phantom-knee-overview.png",
+        "sameAs": [
+          "https://hdl.handle.net/20.500.12380/311285",
+          "https://www.youtube.com/watch?v=lWRFAtuQzvM"
+        ]
+      }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html"><strong class="ltr">Wajih Habrah</strong></a>
+
+        <div class="nav-actions">
+            <a href="../index.html#projects">العودة إلى المشروعات</a>
+            <a class="language-link ltr" href="../../projects/robotic-phantom-knee-digital-twin.html"
+                lang="en" aria-label="View this project in English">English</a>
+        </div>
+    </nav>
+
+    <header>
+        <div>
+            <p class="category">الروبوتات · الهندسة الطبية الحيوية · التوأم الرقمي</p>
+            <h1>رسالة الماجستير: التوأم الرقمي لنموذج الركبة الروبوتية المحاكية</h1>
+            <p class="summary">
+                ركز مشروع رسالة الماجستير على تطوير منصة اختبار لركبة روبوتية
+                محاكية بدرجة حرية واحدة، تجمع بين المشغلات الفعلية والمستشعرات
+                المضمنة و<span class="ltr">ROS 2</span> وتوأم رقمي مبني باستخدام
+                <span class="ltr">Unity</span> للتحكم والعرض والتحقق الهندسي في الزمن الحقيقي.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>نظرة عامة على المشروع</h2>
+            <p>
+                الركبة الروبوتية المحاكية منصة اختبار فيزيائية ورقمية بدرجة حرية
+                واحدة، طُوّرت ضمن رسالة الماجستير في الهندسة الطبية الحيوية بجامعة
+                <span class="ltr">Chalmers University of Technology</span>. صُممت
+                المنصة لدعم البحث والتقييم في المراحل المبكرة لمفاهيم الهياكل
+                الخارجية وروبوتات إعادة التأهيل ضمن بيئة مخبرية مضبوطة.
+            </p>
+            <p>
+                يجمع النظام بين تشغيل روبوتي متضاد وآلية مرنة بصلابة متغيّرة ومحاكاة
+                هوائية للأنسجة الرخوة واستشعار مضمن واتصال عبر
+                <span class="ltr">ROS 2</span> وتوأم رقمي مبني باستخدام
+                <span class="ltr">Unity</span>. تتيح هذه الأنظمة الفرعية دراسة السلوك
+                الفيزيائي والتحكم بالمشغلات وتغذية المستشعرات الراجعة والتمثيل الرقمي
+                المقابل ضمن منظومة متكاملة.
+            </p>
+            <p>
+                يشكل <span class="ltr">Raspberry Pi 5</span> الذي يعمل بنظام
+                <span class="ltr">Ubuntu</span> و<span class="ltr">ROS 2</span>
+                منصة الاتصال والتحكم المركزية، إذ يربط آلية الركبة الفعلية ببيئة
+                <span class="ltr">Unity</span> ويدعم تبادل الأوامر وتغذية النظام
+                الراجعة في الزمن الحقيقي.
+            </p>
+        </section>
+
+        <section>
+            <h2>الدافع الهندسي</h2>
+            <p>
+                يتطلب التطوير المبكر لمفاهيم الهياكل الخارجية وروبوتات إعادة التأهيل
+                بيئة اختبار يمكن فيها دراسة السلوك الميكانيكي والتشغيل والاستشعار
+                والتحكم بصورة مضبوطة وقابلة للتكرار.
+            </p>
+            <p>
+                طُورت الركبة الروبوتية المحاكية لتوفير منصة اختبار فيزيائية كهذه،
+                مع دمج تمثيل رقمي يعمل في الزمن الحقيقي. وهذا يتيح مراقبة سلوك
+                النظام الفعلي وحالته الرقمية المقابلة معاً أثناء التطوير والاختبار.
+            </p>
+            <p>
+                يجمع المشروع لذلك التشغيل الروبوتي والمرونة الميكانيكية والتمثيل
+                الهوائي للأنسجة الرخوة والاستشعار المضمن واتصال التوأم الرقمي ضمن
+                منصة تجريبية واحدة.
+            </p>
+        </section>
+
+        <section>
+            <h2>نظرة عامة على نظام الركبة الروبوتية المحاكية</h2>
+            <p>
+                تدمج المنصة بنية المفصل الميكانيكية والتشغيل الروبوتي المتضاد وآلية
+                الصلابة المتغيّرة والمكوّنات الهوائية والإلكترونيات المضمنة وعتاد
+                الاستشعار ضمن نظام فيزيائي واحد.
+            </p>
+
+            <figure class="zoomable-figure">
+                <button class="image-zoom-trigger" type="button" data-image-dialog="platform-overview-dialog"
+                    aria-label="فتح عرض أكبر لنظام الركبة الروبوتية المحاكية">
+                    <img class="project-image" src="../../assets/images/projects/robotic-phantom-knee-overview.png"
+                        alt="تصيير شفاف للركبة الروبوتية المحاكية يوضح مكوّناتها الميكانيكية والروبوتية والهوائية والإلكترونية الداخلية">
+                    <span class="zoom-hint">عرض بحجم أكبر ↗</span>
+                </button>
+                <figcaption class="image-caption">
+                    تصيير شفاف للنظام يوضح تكامل المكوّنات الميكانيكية والروبوتية
+                    والهوائية والإلكترونية في الركبة الروبوتية المحاكية.
+                </figcaption>
+            </figure>
+
+            <dialog class="image-dialog" id="platform-overview-dialog">
+                <button class="dialog-close" type="button" data-dialog-close
+                    aria-label="إغلاق الصورة المكبّرة للنظام">×</button>
+                <img class="dialog-image" src="../../assets/images/projects/robotic-phantom-knee-overview.png"
+                    alt="عرض مكبّر للركبة الروبوتية المحاكية ومكوّناتها الداخلية">
+            </dialog>
+        </section>
+
+        <section>
+            <h2>النموذج التفاعلي ثلاثي الأبعاد</h2>
+            <p>
+                استكشف النموذج ثلاثي الأبعاد للركبة الروبوتية المحاكية. اسحب لتدوير
+                النموذج، واستخدم عجلة التمرير للتكبير والتصغير، وتفحّص البنية
+                الميكانيكية المتكاملة من زوايا مختلفة.
+            </p>
+
+            <figure class="interactive-model-figure">
+                <div class="interactive-model-shell">
+                    <div class="model-toolbar" role="toolbar" aria-label="أدوات التحكم بالنموذج ثلاثي الأبعاد">
+                        <button class="model-tool is-active" type="button" data-transform-mode="select" aria-pressed="true">اختيار</button>
+                        <button class="model-tool" type="button" data-transform-mode="translate" aria-pressed="false">تحريك</button>
+                        <button class="model-tool" type="button" data-transform-mode="rotate" aria-pressed="false">تدوير</button>
+                        <button class="model-tool" type="button" data-model-action="explode">تفكيك</button>
+                        <button class="model-tool" type="button" data-model-action="hide" disabled>إخفاء الجزء</button>
+                        <button class="model-tool" type="button" data-model-action="show-all">إظهار الكل</button>
+                        <button class="model-tool" type="button" data-model-action="reset">إعادة الضبط</button>
+                        <span class="selected-part-name" id="selected-part-name" aria-live="polite">لم يتم تحديد أي جزء</span>
+                    </div>
+
+                    <div class="interactive-model" id="interactive-model"
+                        aria-label="نموذج تفاعلي ثلاثي الأبعاد للركبة الروبوتية المحاكية">
+                        <div class="model-interaction-hint" id="model-interaction-hint" aria-hidden="true">
+                            <img class="model-controls-prompt" src="../../assets/images/model-viewer-hand-prompt.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="model-loading" id="model-loading" role="status">جارٍ تحميل النموذج ثلاثي الأبعاد…</div>
+                </div>
+
+                <figcaption class="image-caption">
+                    انقر على أحد المكوّنات لتحديده. استخدم «تحريك» أو «تدوير» لتغيير
+                    وضع الجزء المحدد، أو «تفكيك» لفحص التجميع الكامل.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>العرض العملي للمشروع</h2>
+            <p>
+                يعرض الفيديو تطوير منصة الركبة الروبوتية المحاكية وتقييمها التجريبي،
+                بدءاً من مبدأ التشغيل وتطوير النموذج الأولي ووصولاً إلى تكامل الأنظمة
+                الفرعية والتحكم واختبارات المنظومة الجزئية.
+            </p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/lWRFAtuQzvM"
+                    title="مشروع رسالة الماجستير للركبة الروبوتية المحاكية"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">
+                عرض لمبدأ التشغيل والنمذجة والطباعة ثلاثية الأبعاد والتجميع وتكامل
+                العتاد وواجهة المستخدم والتتبّع والتقييد المتضادَّين واختبارات المنظومة الجزئية.
+            </p>
+        </section>
+
+        <section>
+            <h2>رسالة الماجستير</h2>
+            <p>
+                طُورت الركبة الروبوتية المحاكية بصفتها المنصة التجريبية لرسالة
+                الماجستير في الهندسة الطبية الحيوية بجامعة
+                <span class="ltr">Chalmers University of Technology</span>. توثق
+                الرسالة تصميم النظام الفيزيائي والرقمي وتنفيذه وتقييمه، بما يشمل
+                التشغيل الروبوتي والاستشعار المضمن ومعمارية الاتصال وتكامل التوأم الرقمي.
+            </p>
+            <p>
+                بحث العمل كيفية جمع هذه المكوّنات ضمن منصة مخبرية قابلة للتحكم
+                للاختبار المبكر لمفاهيم الهياكل الخارجية وروبوتات إعادة التأهيل،
+                وحدد في الوقت نفسه القيود وفرص التطوير اللاحقة.
+            </p>
+            <p><a href="https://hdl.handle.net/20.500.12380/311285" target="_blank" rel="noopener noreferrer">عرض المنشور الرسمي للرسالة ←</a></p>
+        </section>
+
+        <section>
+            <h2>نظرة تقنية</h2>
+            <div class="information-grid">
+                <div class="information-card"><strong>النظام الميكانيكي</strong>منصة ركبة روبوتية بدرجة حرية واحدة، مع تشغيل متضاد وآلية مرنة بصلابة متغيّرة.</div>
+                <div class="information-card"><strong>التشغيل</strong>مشغّلان روبوتيان بترتيب متضاد للتحكم بحركة الركبة والتتبّع والتفاعل الميكانيكي القابل للضبط.</div>
+                <div class="information-card"><strong>تمثيل الأنسجة الرخوة</strong>حجرات هوائية مدمجة لإضافة سلوك مرن قابل للتحكم حول بنية الركبة.</div>
+                <div class="information-card"><strong>الاستشعار المضمن</strong>وحدات مستشعرات موزعة تقيس الحركة وحالة النظام للتغذية الراجعة والتمثيل الرقمي.</div>
+                <div class="information-card"><strong>التحكم والاتصال</strong>يدير <span class="ltr">Raspberry Pi 5</span> بنظام <span class="ltr">Ubuntu</span> و<span class="ltr">ROS 2 Jazzy</span> اتصالات المشغلات والمستشعرات والأنظمة الفرعية.</div>
+                <div class="information-card"><strong>التوأم الرقمي</strong>بيئة تفاعلية مبنية باستخدام <span class="ltr">Unity</span> ومتصلة بـ<span class="ltr">ROS 2</span> للعرض والتحكم والمزامنة الفيزيائية–الرقمية في الزمن الحقيقي.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>مساهمتي</h2>
+            <p>
+                طورت الركبة الروبوتية المحاكية ودمجتها كمنصة هندسية متعددة
+                التخصصات، شملت النموذج الأولي الفعلي والعتاد المضمن والتحكم الروبوتي
+                ومعمارية الاتصال وتنفيذ التوأم الرقمي.
+            </p>
+            <ul class="contribution-list">
+                <li><strong>معمارية النظام:</strong> حددت المعمارية الفيزيائية–الرقمية الشاملة والواجهات بين المنصة الروبوتية و<span class="ltr">Raspberry Pi</span> و<span class="ltr">ROS 2</span> و<span class="ltr">Unity</span>.</li>
+                <li><strong>التطوير الميكانيكي والنموذج الأولي:</strong> طورت آلية الركبة ومفهوم التشغيل المتضاد وآلية الصلابة المتغيّرة والمكوّنات الهوائية ودمجتها.</li>
+                <li><strong>تكامل المشغلات والتحكم بها:</strong> نفذت الاتصال بالمشغلات الروبوتية وطورت منطق التحكم اللازم للحركة والتتبّع وسلوك التقييد.</li>
+                <li><strong>الاستشعار المضمن:</strong> دمجت وحدات المستشعرات وطورت مسار جمع البيانات المستخدم لتوفير تغذية راجعة عن النظام الفعلي.</li>
+                <li><strong>تطوير <span class="ltr">ROS 2</span>:</strong> طورت عقد <span class="ltr">ROS 2</span> ونظمتها للتحكم بالمشغلات وجمع بيانات المستشعرات واتصال الأنظمة الفرعية وتكامل النظام.</li>
+                <li><strong>التوأم الرقمي:</strong> طورت البيئة الرقمية باستخدام <span class="ltr">Unity</span> وأنشأت اتصالاً ثنائي الاتجاه بين النظام الفعلي وتمثيله الرقمي.</li>
+                <li><strong>اختبار النظام:</strong> نفذت اختبارات تدريجية للأنظمة الفرعية والمنظومة الجزئية لتقييم الاتصال والتشغيل والاستشعار وسلوك النظام المتكامل.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>معمارية النظام</h2>
+            <p>
+                تستخدم المنصة معمارية فيزيائية–رقمية ثنائية الاتجاه، يعمل فيها
+                <span class="ltr">Raspberry Pi 5</span> بنظام
+                <span class="ltr">Ubuntu</span> و<span class="ltr">ROS 2 Jazzy</span>
+                كطبقة التكامل المركزية بين التوأم الرقمي في
+                <span class="ltr">Unity</span> والركبة الروبوتية الفعلية.
+            </p>
+            <p>
+                تدير عقد مخصصة في <span class="ltr">ROS 2</span> الاتصال بالمشغلات
+                الروبوتية ووحدات المستشعرات المضمنة والنظام الهوائي، بينما تتبادل
+                واجهة <span class="ltr">ROS–Unity</span> الأوامر وبيانات حالة النظام
+                مع البيئة الرقمية.
+            </p>
+            <p>
+                تفصل هذه المعمارية اتصالات العتاد منخفضة المستوى عن التمثيل الرقمي
+                التفاعلي، مع إبقاء النظامين الفعلي والافتراضي متزامنين أثناء التشغيل والاختبار.
+            </p>
+
+            <figure class="zoomable-figure">
+                <button class="image-zoom-trigger" type="button" data-image-dialog="architecture-image-dialog"
+                    aria-label="فتح عرض أكبر لمعمارية النظام">
+                    <img class="project-image"
+                        src="../../assets/images/projects/robotic-phantom-knee-system-architecture.png"
+                        alt="معمارية نظام التوأم الرقمي للركبة الروبوتية المحاكية واتصال Unity ثنائي الاتجاه مع Raspberry Pi والمنصة الفعلية">
+                    <span class="zoom-hint">عرض بحجم أكبر ↗</span>
+                </button>
+                <figcaption class="image-caption">
+                    معمارية اتصالات النظام التي تربط بيئة <span class="ltr">Unity</span>
+                    والبرمجيات الوسيطة <span class="ltr">ROS 2</span> على
+                    <span class="ltr">Raspberry Pi 5</span> والمنصة الروبوتية الفعلية.
+                </figcaption>
+            </figure>
+
+            <dialog class="image-dialog" id="architecture-image-dialog">
+                <button class="dialog-close" type="button" data-dialog-close aria-label="إغلاق صورة المعمارية المكبّرة">×</button>
+                <img class="dialog-image"
+                    src="../../assets/images/projects/robotic-phantom-knee-system-architecture.png"
+                    alt="عرض مكبّر لمعمارية نظام التوأم الرقمي للركبة الروبوتية المحاكية">
+            </dialog>
+        </section>
+
+        <section>
+            <h2>التشغيل المتضاد والصلابة المتغيّرة</h2>
+            <p>
+                تنتج حركة الركبة باستخدام مشغّلين روبوتيين قابلين للتحريك العكسي
+                ومرتّبين في تكوين متضاد. يعمل المحرك الأول كمشغّل رئيسي، بينما يستطيع
+                المحرك الثاني تتبّع حركة المحرك الأول وتوفير تفاعل معاكس قابل للتحكم حول المفصل.
+            </p>
+            <p>
+                يستخدم المشغّلان نسب نقل مختلفة: نسبة المحرك الأول
+                <span class="ltr">19:1</span> ونسبة المحرك الثاني
+                <span class="ltr">5:1</span>. يتيح تشغيلهما المنسق دراسة التتبّع
+                والتقييد والتفاعل المرن بدلاً من العمل كمفصل صلب تقليدي بمحرك واحد.
+            </p>
+            <p>
+                دُمجت آلية مرنة تعتمد على نابض ضمن الترتيب المتضاد لإضافة مطاوعة
+                ميكانيكية. تسمح الحركة النسبية داخل الآلية بتشوه مرن، ما يوفر أساساً
+                لدراسة التشغيل بصلابة متغيّرة والسلوك المرن حول الركبة الروبوتية.
+            </p>
+        </section>
+
+        <section>
+            <h2>التمثيل الهوائي للأنسجة الرخوة</h2>
+            <p>
+                دُمجت حجرات هوائية حول بنية الركبة الروبوتية لتكوين طبقة خارجية قابلة
+                للتشوه تمثل السلوك المرن للأنسجة الرخوة المحيطة بالمفصل.
+            </p>
+            <p>
+                يغيّر النظام الهوائي تشوه الحجرات من خلال التحكم بالنفخ والتفريغ
+                وإطلاق الهواء، ويتيح مراقبة استجابتها الميكانيكية أثناء تشغيل المنصة.
+                ويضيف ذلك عنصراً فيزيائياً مرناً غير موجود في تجهيزات الاختبار الروبوتية الصلبة التقليدية.
+            </p>
+            <p>
+                يسهم النظام الهوائي، إلى جانب التشغيل المتضاد والآلية المرنة، في
+                توفير بيئة اختبار فيزيائية أكثر قابلية للتكيف لدراسة التفاعل مع
+                مفاهيم الهياكل الخارجية وروبوتات إعادة التأهيل في مراحلها المبكرة.
+            </p>
+        </section>
+
+        <section>
+            <h2>الاستشعار المضمن وجمع البيانات</h2>
+            <p>
+                دُمجت وحدات مستشعرات مضمنة موزعة في جزأَي الفخذ والساق من المنصة
+                الروبوتية لتوفير قياسات تصف الحالة الفيزيائية وحركة النظام.
+            </p>
+            <p>
+                تعتمد كل وحدة على المتحكم الدقيق <span class="ltr">FeatherS3</span>
+                وتضم وحدة قياس بالقصور الذاتي <span class="ltr">ISM330DHCX</span>
+                ومقياس مغناطيسية <span class="ltr">MMC5983MA</span> ومستشعر حرارة
+                <span class="ltr">TMP117</span>. توفر هذه المستشعرات بيانات الحركة
+                والاتجاه ودرجة الحرارة لنظام التحكم.
+            </p>
+            <p>
+                تُرسل القياسات إلى <span class="ltr">Raspberry Pi</span> وتُعالج
+                عبر عقد مخصصة في <span class="ltr">ROS 2</span>، ما يدمج تغذية
+                النظام الفعلي الراجعة ضمن معمارية الاتصال نفسها المستخدمة للتحكم
+                بالمشغلات والتوأم الرقمي المبني باستخدام <span class="ltr">Unity</span>.
+            </p>
+        </section>
+
+        <section>
+            <h2>التحكم والاتصال عبر <span class="ltr">ROS 2</span></h2>
+            <p>
+                يعمل <span class="ltr">Raspberry Pi 5</span> بنظام
+                <span class="ltr">Ubuntu</span> و<span class="ltr">ROS 2 Jazzy</span>
+                كمنصة الحوسبة والاتصال المركزية. ويوفر <span class="ltr">ROS 2</span>
+                البرمجيات الوسيطة لتنظيم التحكم بالمشغلات والاستشعار المضمن والاتصال بالبيئة الرقمية.
+            </p>
+            <p>
+                تفصل عقد مخصصة في <span class="ltr">ROS 2</span> وظائف الأنظمة
+                الفرعية الرئيسية، بما فيها الاتصال بالمشغلات وجمع بيانات المستشعرات
+                والتحكم بالمكوّنات الفيزيائية الأخرى. وتسمح هذه البنية المعيارية
+                بتطوير الأنظمة الفرعية واختبارها كل على حدة قبل دمجها في المنصة الكاملة.
+            </p>
+            <p>
+                أثناء التشغيل، تتبادل الأوامر والتغذية الراجعة عبر مسار اتصال
+                <span class="ltr">ROS 2</span>، فتتاح حالات المشغلات وقياسات المستشعرات
+                للعقد الأخرى ولواجهة التوأم الرقمي في الزمن الحقيقي.
+            </p>
+        </section>
+
+        <section>
+            <h2>التوأم الرقمي المبني باستخدام <span class="ltr">Unity</span></h2>
+            <p>
+                طُور تمثيل رقمي مقابل للركبة الروبوتية المحاكية باستخدام
+                <span class="ltr">Unity</span> ورُبط بالمنصة الفعلية عبر
+                <span class="ltr">ROS 2</span>. توفر البيئة الرقمية عرضاً فورياً
+                لآلية الركبة وتتلقى في الوقت نفسه معلومات الحالة من النظام الفعلي.
+            </p>
+            <p>
+                الاتصال ثنائي الاتجاه: يمكن إرسال أوامر التحكم من
+                <span class="ltr">Unity</span> إلى نظام <span class="ltr">ROS 2</span>،
+                بينما تعاد تغذية المشغلات والمستشعرات إلى <span class="ltr">Unity</span>
+                لتحديث التمثيل الرقمي. وهكذا يعمل النظامان الفعلي والافتراضي كمنصة فيزيائية–رقمية مترابطة.
+            </p>
+            <p>
+                توفر واجهة <span class="ltr">Unity</span> أيضاً بيئة تفاعلية لمراقبة
+                سلوك النظام وإصدار أوامر التحكم ومتابعة التغذية الراجعة أثناء التطوير والاختبارات التجريبية.
+            </p>
+        </section>
+
+        <section>
+            <h2>التتبّع والتقييد المتضادّان</h2>
+            <p>
+                يدعم تكوين المشغلات المتضاد وضع تتبّع يتبع فيه المحرك الثاني تلقائياً
+                الحركة المأمور بها للمحرك الأول. يبقي ذلك المشغّل الثانوي منسقاً مع
+                المشغّل الرئيسي مع الحفاظ على الترتيب الميكانيكي المتضاد.
+            </p>
+            <p>
+                نُفذت أيضاً وظيفة تقييد لضبط الحركة المسموح بها للمحرك الثاني نسبةً
+                إلى المحرك الأول. يمكن ضبط نطاق التقييد من تتبّع غير مقيّد باتجاه
+                مجال تشغيل أضيق، ما يسمح بتعديل التفاعل بين المشغّلين أثناء الاختبار.
+            </p>
+            <p>
+                خلال الاختبارات المعروضة، ضُبط نطاق التقييد من
+                <span class="ltr">0°</span> إلى نحو <span class="ltr">±38°</span>،
+                ما وفر وسيلة عملية لتقييم الحركة النسبية المضبوطة ضمن النظام المتضاد.
+            </p>
+        </section>
+
+        <section>
+            <h2>تطوير النموذج الأولي وتصنيعه</h2>
+            <p>
+                طُورت المنصة الفعلية عبر عملية نمذجة أولية تكرارية جمعت بين النمذجة
+                ثلاثية الأبعاد المخصصة والتصنيع بالإضافة والتجميع الميكانيكي. صُممت
+                المكوّنات الهيكلية والوظيفية لآلية الركبة خصيصاً لمتطلبات المنصة.
+            </p>
+            <p>
+                صُممت الأجزاء المخصصة باستخدام <span class="ltr">Blender</span>
+                وصُنعت بالطباعة ثلاثية الأبعاد، ما أتاح تعديل هندسة بنية الركبة وواجهات
+                المشغلات والآلية المرنة والمكوّنات الهوائية طوال مراحل التطوير.
+            </p>
+            <p>
+                جُمعت الأجزاء المصنّعة تدريجياً مع المشغلات الروبوتية وعتاد الاستشعار
+                والنظام الهوائي. أتاح هذا النهج تقييم الملاءمة الميكانيكية وسهولة
+                الوصول وتفاعل الأنظمة الفرعية وسلوك النموذج الأولي وتحسينها أثناء التطوير.
+            </p>
+        </section>
+
+        <section>
+            <h2>الاختبارات والتقييم التجريبي</h2>
+            <p>
+                قُيّمت المنصة تدريجياً عبر اختبارات الأنظمة الفرعية والمنظومة الجزئية،
+                ما أتاح التحقق من المكوّنات ومسارات الاتصال كل على حدة قبل الانتقال
+                إلى تشغيل أكثر تكاملاً.
+            </p>
+            <p>
+                شملت الاختبارات تشغيل المشغلات الروبوتية وسلوك التتبّع والتقييد
+                المتضاد واستجابة آلية الصلابة المتغيّرة وتشغيل الحجرات الهوائية
+                والاستشعار المضمن واتصال <span class="ltr">ROS 2</span> والمزامنة
+                مع البيئة الرقمية في <span class="ltr">Unity</span>.
+            </p>
+            <p>
+                استُخدمت النتائج لتقييم وظائف النظام المنفذة وتحديد قيود التكامل
+                ودراسة جدوى المنصة الفيزيائية–الرقمية بوصفها أساساً لمزيد من التطوير والاختبارات الشاملة.
+            </p>
+        </section>
+
+        <section>
+            <h2>التقنيات والأدوات الهندسية</h2>
+            <ul class="technology-list">
+                <li>الروبوتات الطبية الحيوية</li>
+                <li>التشغيل الروبوتي</li>
+                <li>التشغيل بصلابة متغيّرة</li>
+                <li>الأنظمة الهوائية</li>
+                <li>الأنظمة المضمنة</li>
+                <li>مستشعرات القصور الذاتي</li>
+                <li class="ltr">Raspberry Pi 5</li>
+                <li class="ltr">Ubuntu 24.04 LTS</li>
+                <li class="ltr">ROS 2 Jazzy</li>
+                <li class="ltr">Python</li>
+                <li class="ltr">C++</li>
+                <li>الاتصال التسلسلي</li>
+                <li class="ltr">Unity</li>
+                <li>التوائم الرقمية</li>
+                <li class="ltr">ROS–Unity Communication</li>
+                <li class="ltr">Blender</li>
+                <li>النمذجة ثلاثية الأبعاد</li>
+                <li>الطباعة ثلاثية الأبعاد</li>
+                <li>النمذجة الأولية السريعة</li>
+                <li>الاختبارات التجريبية</li>
+                <li>تكامل الأنظمة</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>التطبيقات والتطوير المستقبلي</h2>
+            <p>
+                طُورت الركبة الروبوتية المحاكية كمنصة اختبار بحثية وهندسية، لا كبديل
+                تشريحي مباشر للركبة البشرية. يتمثل دورها الأساسي في توفير بيئة
+                فيزيائية–رقمية قابلة للتحكم لاستكشاف مفاهيم الهياكل الخارجية وروبوتات
+                إعادة التأهيل والتفاعل بين الإنسان والروبوت قبل الانتقال إلى تحقق أكثر تقدماً.
+            </p>
+            <p>
+                يمكن للمنصة دعم دراسة التشغيل المرن واستراتيجيات التحكم المتضاد
+                والاستشعار المضمن واتصال التوأم الرقمي والتفاعل بين مفاهيم الروبوتات
+                القابلة للارتداء ونظام اختبار مخبري قابل للتكرار.
+            </p>
+            <p>
+                يمكن أن يشمل التطوير المستقبلي استراتيجيات تحكم أكثر تقدماً وتمثيلاً
+                ميكانيكياً حيوياً محسناً واستشعاراً أوسع وتحكماً هوائياً أدق ومزامنة
+                فيزيائية–رقمية أوثق وتحققاً أشمل على مستوى النظام.
+            </p>
+        </section>
+
+        <a class="back-button" href="../index.html#projects">العودة إلى الموقع المهني →</a>
+    </main>
+
+    <footer>
+        <div>© 2026 <span class="ltr">Wajih Habrah</span></div>
+        <div class="footer-links">
+            <a href="../index.html">الرئيسية</a>
+            <a href="mailto:wajih.habrah@hotmail.com">البريد الإلكتروني</a>
+            <a class="ltr" href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="ltr" href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -13,6 +13,36 @@ import { RoomEnvironment } from
     "three/addons/environments/RoomEnvironment.js";
 
 
+const interfaceLanguage =
+    document.documentElement.lang
+        .toLowerCase()
+        .split("-")[0];
+
+const viewerText = interfaceLanguage === "ar"
+    ? {
+        loading: (percentage) =>
+            `جارٍ تحميل النموذج ثلاثي الأبعاد… ${percentage}%`,
+        loadError:
+            "تعذّر تحميل النموذج ثلاثي الأبعاد.",
+        explode: "تفكيك",
+        assemble: "تجميع",
+        noPart: "لم يتم تحديد أي جزء",
+        unnamedPart: "مكوّن بلا اسم",
+        selected: (name) => `المحدّد: ${name}`
+    }
+    : {
+        loading: (percentage) =>
+            `Loading 3D model… ${percentage}%`,
+        loadError:
+            "The 3D model could not be loaded.",
+        explode: "Explode",
+        assemble: "Assemble",
+        noPart: "No part selected",
+        unnamedPart: "Unnamed component",
+        selected: (name) => `Selected: ${name}`
+    };
+
+
 const container = document.getElementById("interactive-model");
 
 if (container) {
@@ -365,7 +395,7 @@ function initializeViewer() {
                 );
 
                 loadingMessage.textContent =
-                    `Loading 3D model… ${percentage}%`;
+                    viewerText.loading(percentage);
             }
         },
 
@@ -377,7 +407,7 @@ function initializeViewer() {
 
             if (loadingMessage) {
                 loadingMessage.textContent =
-                    "The 3D model could not be loaded.";
+                    viewerText.loadError;
             }
         }
     );
@@ -430,7 +460,7 @@ function initializeViewer() {
 
         if (explodeButton) {
             explodeButton.textContent =
-                "Explode";
+                viewerText.explode;
         }
 
         return;
@@ -525,7 +555,7 @@ function initializeViewer() {
 
     if (explodeButton) {
         explodeButton.textContent =
-            "Assemble";
+            viewerText.assemble;
     }
     }
     
@@ -887,7 +917,8 @@ function updatePartAnimation(time) {
     isExploded = false;
 
     if (explodeButton) {
-        explodeButton.textContent = "Explode";
+        explodeButton.textContent =
+            viewerText.explode;
     }
     }
     
@@ -980,7 +1011,7 @@ function setSelectedPart(part) {
     if (!selectedPart) {
         if (selectedPartName) {
             selectedPartName.textContent =
-                "No part selected";
+                viewerText.noPart;
         }
 
         return;
@@ -1000,11 +1031,11 @@ function setSelectedPart(part) {
         selectedPart.name
             .replaceAll("_", " ")
             .trim() ||
-        "Unnamed component";
+        viewerText.unnamedPart;
 
     if (selectedPartName) {
         selectedPartName.textContent =
-            `Selected: ${readableName}`;
+            viewerText.selected(readableName);
     }
 
     if (activeTransformMode !== "select") {

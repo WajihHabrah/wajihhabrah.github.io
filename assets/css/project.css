@@ -288,7 +288,7 @@ main section[id] {
     padding: 26px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-left: 4px solid var(--primary);
+    border-inline-start: 4px solid var(--primary);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
 }
@@ -538,7 +538,7 @@ main section[id] {
 }
 
 .selected-part-name {
-    margin-left: auto;
+    margin-inline-start: auto;
     color: var(--text-muted);
     font-size: 0.9rem;
 }
@@ -616,7 +616,7 @@ main section[id] {
     .selected-part-name {
         width: 100%;
         margin-top: 4px;
-        margin-left: 0;
+        margin-inline-start: 0;
     }
 }
 
@@ -658,7 +658,7 @@ main section[id] {
 .note {
     padding: 20px;
     background: #fffbeb;
-    border-left: 4px solid #f59e0b;
+    border-inline-start: 4px solid #f59e0b;
 }
 
 
@@ -708,7 +708,7 @@ main section[id] {
 
 .zoom-hint {
     position: absolute;
-    right: 16px;
+    inset-inline-end: 16px;
     bottom: 16px;
     padding: 9px 13px;
 
@@ -778,7 +778,7 @@ main section[id] {
 .dialog-close {
     position: absolute;
     top: 10px;
-    right: 12px;
+    inset-inline-end: 12px;
 
     width: 36px;
     height: 36px;
@@ -806,7 +806,7 @@ main section[id] {
    ========================= */
 
 .contribution-list {
-    padding-left: 22px;
+    padding-inline-start: 22px;
 }
 
 .contribution-list li {
@@ -815,4 +815,16 @@ main section[id] {
 
 .contribution-list strong {
     color: var(--primary-dark);
+}
+
+/* =========================
+   Right-to-Left Localization
+   ========================= */
+
+html[dir="rtl"] .category,
+html[dir="rtl"] .page-navigation-label,
+html[dir="rtl"] .experience-fact dt,
+html[dir="rtl"] .case-study-label {
+    letter-spacing: 0;
+    text-transform: none;
 }

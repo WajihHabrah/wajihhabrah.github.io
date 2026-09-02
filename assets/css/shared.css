@@ -41,6 +41,27 @@ body {
   background: var(--background);
 }
 
+html[lang="ar"] body {
+  font-family:
+    "Noto Sans Arabic",
+    Tahoma,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  line-height: 1.85;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3 {
+  letter-spacing: 0;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 h1,
 h2,
 h3 {
@@ -126,10 +147,35 @@ nav a:hover {
   color: var(--primary);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 5px 11px;
+  color: var(--primary);
+  background: var(--soft-blue);
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.language-link:hover {
+  color: var(--surface);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
 .button {
   display: inline-block;
   margin-top: 25px;
-  margin-right: 10px;
+  margin-inline-end: 10px;
   padding: 12px 22px;
   color: var(--surface);
   background: var(--primary);
@@ -190,5 +236,21 @@ nav a:hover {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+html[dir="rtl"] .category,
+html[dir="rtl"] .page-navigation-label,
+html[dir="rtl"] .experience-fact dt,
+html[dir="rtl"] .case-study-label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 650px) {
+  .nav-actions {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }

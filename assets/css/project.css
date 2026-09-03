@@ -32,6 +32,36 @@ h1 {
     color: #4b5563;
 }
 
+.coursework-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+  height: 85px;
+  margin-bottom: 22px;
+
+  text-decoration: none;
+}
+
+.coursework-logo-link:hover {
+  opacity: 0.82;
+}
+
+.coursework-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  max-height: 82px;
+  object-fit: contain;
+}
+
+.coursework-logo--damascus {
+  max-width: 95px;
+  max-height: 85px;
+}
+
 .experience-facts {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

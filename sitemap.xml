@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wajihhabrah.github.io/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/" />
@@ -17,49 +17,57 @@
 
   <url>
     <loc>https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
-    <xhtml:link rel="alternate" hreflang="ar"
-      href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
   </url>
 
   <url>
     <loc>https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
-    <xhtml:link rel="alternate" hreflang="ar"
-      href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html" />
   </url>
 
   <url>
     <loc>https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
-    <xhtml:link rel="alternate" hreflang="ar"
-      href="https://wajihhabrah.github.io/ar/projects/clinical-engineering-hospital-technology.html" />
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
   </url>
 
   <url>
     <loc>https://wajihhabrah.github.io/ar/projects/clinical-engineering-hospital-technology.html</loc>
-    <xhtml:link rel="alternate" hreflang="en"
-      href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
-    <xhtml:link rel="alternate" hreflang="ar"
-      href="https://wajihhabrah.github.io/ar/projects/clinical-engineering-hospital-technology.html" />
-    <xhtml:link rel="alternate" hreflang="x-default"
-      href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/projects/clinical-engineering-hospital-technology.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/projects/clinical-engineering-hospital-technology.html" />
   </url>
 
-    <url>
+  <url>
     <loc>https://wajihhabrah.github.io/education/masters-degree/masters-biomedical-engineering-coursework.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/education/masters-degree/masters-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/education/masters-degree/masters-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/education/masters-degree/masters-biomedical-engineering-coursework.html" />
   </url>
 
-    <url>
+  <url>
+    <loc>https://wajihhabrah.github.io/ar/education/masters-degree/masters-biomedical-engineering-coursework.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/education/masters-degree/masters-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/education/masters-degree/masters-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/education/masters-degree/masters-biomedical-engineering-coursework.html" />
+  </url>
+
+  <url>
     <loc>https://wajihhabrah.github.io/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
+  </url>
+
+  <url>
+    <loc>https://wajihhabrah.github.io/ar/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/education/bachelors-degree/bachelors-biomedical-engineering-coursework.html" />
   </url>
 </urlset>

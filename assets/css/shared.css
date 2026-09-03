@@ -247,6 +247,43 @@ html[dir="rtl"] .case-study-label {
   text-transform: none;
 }
 
+#education .university-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 95px;
+  margin: 0 0 20px;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+#education .university-logo-link:hover {
+  opacity: 0.82;
+}
+
+#education .university-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 220px;
+  max-height: 85px;
+  object-fit: contain;
+}
+
+#education .university-logo--damascus {
+  max-width: 100px;
+  max-height: 90px;
+}
+
+#education .card > h3 {
+  margin-top: 0;
+}
+
 @media (max-width: 650px) {
   .nav-actions {
     gap: 12px;

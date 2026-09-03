@@ -828,3 +828,57 @@ html[dir="rtl"] .case-study-label {
     letter-spacing: 0;
     text-transform: none;
 }
+
+/* =========================
+   Education Course Cards
+   ========================= */
+
+.course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 28px;
+}
+
+.course-grid .information-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--primary);
+}
+
+.course-grid .information-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+}
+
+.course-grid .information-card p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+}
+
+.course-grid .document-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+@media (max-width: 700px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.course-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+}
+
+.course-list li {
+    padding-left: 3px;
+}
+
+.course-list li + li {
+    margin-top: 7px;
+}
+
+.course-list li::marker {
+    color: var(--primary);
+}

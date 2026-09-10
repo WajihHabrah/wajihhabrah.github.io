@@ -111,3 +111,100 @@ A full browser or real-device check of the updated pages and interactive 3D mode
 - `interactive-model.js`: Three.js interaction and localized viewer controls.
 
 Update corresponding English, Arabic and Swedish pages together when changing content. If a URL changes, update navigation, canonical URLs, social URLs, language alternatives and the sitemap together.
+
+
+File Tree:
+
+wajihhabrah.github.io/
+│
+├── index.html
+├── README.md
+├── robots.txt
+├── sitemap.xml
+├── googlebbfc94b51f98188a.html
+│
+├── ar/
+│   ├── index.html
+│   ├── education/
+│   │   ├── bachelors-degree
+│   │   │   └── bachelors-biomedical-engineering-coursework-ar.html
+│   │   │
+│   │   └── masters-degree
+│   │       └── masters-biomedical-engineering-coursework-ar.html
+│   └── projects/
+│       ├── clinical-engineering-hospital-technology-ar.html
+│       │
+│       └── robotic-phantom-knee-digital-twin-ar.html
+│
+├── sv/
+│   ├── index.html
+│   ├── education/
+│   │   ├── bachelors-degree
+│   │   │   └── bachelors-biomedical-engineering-coursework-sv.html
+│   │   │
+│   │   └── masters-degree
+│   │       └── masters-biomedical-engineering-coursework-sv.html
+│   └── projects/
+│       ├── clinical-engineering-hospital-technology-sv.html
+│       │
+│       └── robotic-phantom-knee-digital-twin-sv.html
+│
+│
+├── assets/
+│   │
+│   ├── css/
+│   │   ├── home.css
+│   │   │
+│   │   ├── project.css
+│   │   │
+│   │   └── shared.css
+│   │
+│   ├── documents/
+│   │   ├── clinical-engineering/
+│   │   │   ├── b-braun-infusion-pumps-training.pdf
+│   │   │   ├── cardiolex-quickels-ecg-training.pdf
+│   │   │   ├── fisher-paykel-respiratory-equipment-training.pdf
+│   │   │   ├── mcube-biocon-700-training.pdf
+│   │   │   ├── medical-device-safety-training.pdf
+│   │   │   ├── philips-intellivue-monitoring-training.pdf
+│   │   │   └── smiths-medical-patient-warming-training.pdf
+│   │   │
+│   │   └── wajih-habrah-cv.pdf
+│   │
+│   ├── images/
+│   │   ├── education/
+│   │   │   ├── chalmers-university-logo.png
+│   │   │   └── damascus-university-logo.png
+│   │   │
+│   │   ├── projects/
+│   │   │   ├── clinical-engineering-hospital-technology.jpg
+│   │   │   ├── robotic-phantom-knee-overview.png
+│   │   │   └── robotic-phantom-knee-system-architecture.png
+│   │   │
+│   │   ├── favicon.svg
+│   │   ├── model-viewer-hand-prompt.svg
+│   │   ├── wajih-habrah-portfolio-preview.png
+│   │   └── wajih-habrah-profile.jpg
+│   │
+│   ├── js/
+│   │   ├── interactive-model.js
+│   │   │
+│   │   ├── model-loader.js
+│   │   │
+│   │   └── project.js
+│   │
+│   └── models/
+│       └── robotic-phantom-knee.glb
+│
+├── education/
+│   ├── bachelors-degree/
+│   │   └── bachelors-biomedical-engineering-coursework.html
+│   │ 
+│   └── masters-degree/
+│       └── masters-biomedical-engineering-coursework.html
+│
+└── projects/
+    │
+    ├── robotic-phantom-knee-digital-twin.html
+    │
+    └── clinical-engineering-hospital-technology.html

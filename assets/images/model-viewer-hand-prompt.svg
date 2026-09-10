@@ -2,28 +2,36 @@
   Interaction prompt based on Google model-viewer's controls prompt.
   Copyright 2019 Google LLC. Licensed under Apache-2.0.
   https://github.com/google/model-viewer
+  Modified for this portfolio: blue contact rings, direction cues and outline.
 -->
 <svg xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 25 36"
-    width="25"
-    height="36"
+    viewBox="-5 -4 35 44"
+    width="35"
+    height="44"
     aria-hidden="true">
 
     <circle
         cx="11.25"
         cy="11.8"
-        r="9.2"
-        fill="#e4e4e4"
-        fill-opacity="0.55"/>
+        r="10.2"
+        fill="#dbeafe"
+        fill-opacity="0.85"/>
 
     <circle
         cx="11.25"
         cy="11.8"
-        r="9.2"
+        r="10.2"
         fill="none"
-        stroke="#000000"
-        stroke-opacity="0.08"
-        stroke-width="1"/>
+        stroke="#2563eb"
+        stroke-opacity="0.38"
+        stroke-width="0.9"/>
+
+    <circle cx="11.25" cy="11.8" r="7.2" fill="none"
+        stroke="#60a5fa" stroke-opacity="0.5" stroke-width="0.7"/>
+
+    <path d="M-1 8.8 -3.7 11.8 -1 14.8 M24 8.8 26.7 11.8 24 14.8"
+        fill="none" stroke="#1d4ed8" stroke-width="1.25"
+        stroke-linecap="round" stroke-linejoin="round"/>
 
     <path
         d="M22.444 24.94
@@ -48,8 +56,8 @@
            C22.492 24.991 22.474 24.968 22.444 24.94
            Z"
         fill="#ffffff"
-        stroke="#000000"
-        stroke-opacity="0.42"
-        stroke-width="0.75"
+        stroke="#1e40af"
+        stroke-opacity="0.9"
+        stroke-width="0.95"
         stroke-linejoin="round"/>
 </svg>

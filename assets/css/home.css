@@ -1,0 +1,45 @@
+.home-header { padding: 70px 24px 60px; background: white; border-bottom: 1px solid var(--border); }
+.hero { max-width: var(--content-width); margin-inline: auto; display: grid; grid-template-columns: minmax(0,1fr) 230px; align-items: center; gap: 64px; }
+.hero-content { min-width: 0; }
+.eyebrow { margin: 0 0 12px; color: var(--primary-dark); font-size: .9rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+h1 { margin: 0 0 18px; font-size: clamp(2.75rem,5.8vw,4.5rem); line-height: 1.12; }
+.subtitle { max-width: 62ch; margin-bottom: 22px; font-size: 1.15rem; color: var(--text-muted); }
+.profile-photo { width: 230px; height: 230px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 10px 35px rgba(15,23,42,.13); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 15px; }
+.hero-social { display: flex; gap: 22px; font-size: .95rem; }
+.hero-social a { text-decoration: none; }
+.hero-facts { display: flex; flex-wrap: wrap; padding: 0; margin: 0; gap: 8px 20px; list-style: none; color: var(--primary-dark); font-size: .875rem; font-weight: 650; }
+.projects { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px; }
+.work-card { display: flex; flex-direction: column; overflow: hidden; }
+.card-image { display: block; width: calc(100% + 50px); max-width: none; aspect-ratio: 16 / 9; height: auto; margin: -25px -25px 22px; object-fit: cover; background: #f1f5f9; }
+.work-card:first-child .card-image { object-fit: contain; background: white; }
+.work-kind { margin: 0 0 8px; color: var(--primary-dark); font-size: .875rem; font-weight: 700; }
+.work-card h3 { margin: 0 0 12px; font-size: 1.35rem; }
+.work-card p { margin-top: 0; }
+.card-actions { margin-top: auto; padding-top: 14px; }
+.experience-item { padding: 30px; background: white; border: 1px solid var(--border); border-inline-start: 4px solid var(--primary); border-radius: var(--radius); }
+.experience-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 18px; }
+.experience-header h3 { margin: 0 0 6px; font-size: 1.3rem; }
+.experience-company { margin: 0 0 8px; color: var(--primary-dark); font-weight: 650; }
+.experience-date { margin: 0; color: var(--text-muted); font-size: .95rem; }
+.experience-item ul { padding-inline-start: 22px; margin-block: 20px; }
+.experience-item li { margin-bottom: 10px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.skill-group { padding: 25px; background: white; border: 1px solid var(--border); border-radius: var(--radius); }
+.skill-group h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--primary-dark); }
+.skill-context { color: var(--text-muted); font-size: .875rem; margin-top: 0; }
+.skill-group ul { padding-inline-start: 20px; margin-bottom: 22px; }
+.skill-group li { margin-block: 8px; }
+.skill-group a { font-size: .95rem; }
+.education-card { display: flex; flex-direction: column; }
+.university-logo-link { width: 100%; height: 95px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+.university-logo { max-width: 220px; max-height: 85px; width: auto; height: auto; object-fit: contain; }
+.university-logo--damascus { max-width: 100px; max-height: 90px; }
+.education-card .coursework-link { margin-top: auto; }
+.contact-panel { padding: 34px; background: var(--soft-blue); border: 1px solid #cdddfb; border-radius: var(--radius); }
+.contact-panel h2 { margin-top: 0; }
+.contact-email { font-size: 1.1rem; font-weight: 650; }
+html[dir="rtl"] .eyebrow { letter-spacing: 0; text-transform: none; }
+@media (max-width: 900px) { .hero { gap: 30px; grid-template-columns: minmax(0,1fr) 180px; } .profile-photo { width: 180px; height: 180px; } .skills-grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .home-header { padding-block: 42px; } .hero { grid-template-columns: 1fr; gap: 28px; } .profile-photo { width: 116px; height: 116px; } .projects { grid-template-columns: 1fr; } .experience-header { flex-direction: column; gap: 12px; } }
+@media (max-width: 480px) { .home-header { padding-inline: 16px; } .contact-panel, .experience-item { padding: 24px; } .hero-actions .button { flex: 1 1 auto; } }

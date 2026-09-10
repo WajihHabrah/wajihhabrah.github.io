@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+
+    <link rel="stylesheet" href="../../assets/css/shared.css">
+
+    <link rel="stylesheet" href="../../assets/css/project.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="../../assets/js/model-loader.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Masterexamensarbete av Wajih Habrah: utveckling av en robotbaserad knäfantom med antagonistisk drivning, inbyggda sensorer, ROS 2 och en digital tvilling i Unity.">
+
+    <title>
+        Masterexamensarbete: Robotic Phantom Knee och digital tvilling | Wajih Habrah
+    </title>
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Robotic Phantom Knee och digital tvilling | Wajih Habrah">
+
+    <meta property="og:description" content="Ett masterexamensarbete om utveckling av en robotbaserad knäfantom med antagonistisk drivning, inbyggda sensorer, ROS 2 och en digital tvilling i Unity.">
+
+    <meta property="og:url" content="https://wajihhabrah.github.io/sv/projects/robotic-phantom-knee-digital-twin-sv.html">
+
+    <meta property="og:image" content="https://wajihhabrah.github.io/assets/images/projects/robotic-phantom-knee-overview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://wajihhabrah.github.io/sv/projects/robotic-phantom-knee-digital-twin-sv.html">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Masterexamensarbete: Robotic Phantom Knee och digital tvilling | Wajih Habrah",
+  "url": "https://wajihhabrah.github.io/sv/projects/robotic-phantom-knee-digital-twin-sv.html",
+  "inLanguage": "sv",
+  "description": "Masterexamensarbete av Wajih Habrah: utveckling av en robotbaserad knäfantom med antagonistisk drivning, inbyggda sensorer, ROS 2 och en digital tvilling i Unity.",
+  "mainEntity": {
+    "@type": "Thesis",
+    "name": "Robotic Phantom Knee Digital Twin",
+    "url": "https://hdl.handle.net/20.500.12380/311285",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Wajih Habrah",
+      "url": "https://wajihhabrah.github.io/"
+    },
+    "sourceOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Chalmers University of Technology"
+    },
+    "inSupportOf": "Master’s Degree in Biomedical Engineering",
+    "about": [
+      "Biomedical Engineering",
+      "Robotics",
+      "Digital Twins",
+      "ROS 2",
+      "Embedded Systems",
+      "Rehabilitation Technology"
+    ],
+    "image": "https://wajihhabrah.github.io/assets/images/projects/robotic-phantom-knee-overview.png",
+    "sameAs": [
+      "https://hdl.handle.net/20.500.12380/311285",
+      "https://www.youtube.com/watch?v=lWRFAtuQzvM"
+    ]
+  }
+}
+</script>
+<script src="../../assets/js/project.js" defer></script>
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html">
+<link rel="alternate" hreflang="sv" href="https://wajihhabrah.github.io/sv/projects/robotic-phantom-knee-digital-twin-sv.html">
+<meta property="og:locale:alternate" content="ar_AR">
+<link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/projects/robotic-phantom-knee-digital-twin-ar.html">
+<link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/projects/robotic-phantom-knee-digital-twin.html">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Hoppa till innehållet</a><nav class="site-nav" aria-label="Huvudnavigation"><div class="nav-inner">
+      <a class="brand" href="../index.html">Wajih Habrah</a>
+      <div class="nav-actions">
+<a class="back-link" href="../index.html#projects">Tillbaka till projekten</a><div class="language-switcher" role="group" aria-label="Välj språk">
+<a class="language-link" lang="en" dir="ltr" title="English" href="../../projects/robotic-phantom-knee-digital-twin.html" hreflang="en" aria-label="Read this page in English">EN</a><span class="language-link" lang="sv" dir="ltr" title="Svenska" aria-current="page" aria-label="Svenska">SV</span><a class="language-link" lang="ar" dir="rtl" title="العربية" href="../../ar/projects/robotic-phantom-knee-digital-twin-ar.html" hreflang="ar" aria-label="عرض هذه الصفحة بالعربية">العربية</a>
+</div>
+</div>
+    </div></nav><header>
+        <div>
+<p class="category">Masterexamensarbete · Medicinsk teknik</p>
+<h1>Robotic Phantom Knee och digital tvilling</h1>
+<p class="summary">Ett masterexamensarbete som förenar mekanisk konstruktion, inbyggda sensorer, ROS 2 och Unity i en bänkbaserad plattform för tidig forskning om exoskelett och rehabiliteringsrobotik.</p>
+<div class="action-links header-actions">
+<a class="button" href="#demonstration">Spela upp projektdemonstrationen</a><a class="button secondary" href="https://hdl.handle.net/20.500.12380/311285" target="_blank" rel="noopener noreferrer" hreflang="en">Läs examensarbetet hos Chalmers</a>
+</div>
+<dl class="experience-facts">
+<div class="experience-fact">
+<dt>Min roll</dt>
+<dd>Konstruktion, integration och testning</dd>
+</div>
+<div class="experience-fact">
+<dt>Omfattning</dt>
+<dd>Forskningsprototyp med en frihetsgrad</dd>
+</div>
+<div class="experience-fact">
+<dt>Lärosäte och år</dt>
+<dd>Chalmers tekniska högskola · 2026</dd>
+</div>
+</dl>
+</div></header>
+
+    <main id="main-content"><div class="page-navigation" role="navigation" aria-label="Projektets avsnitt"><div class="page-navigation-links">
+<a href="#overview">Översikt</a><a href="#demonstration">Demonstration</a><a href="#contribution">Mitt bidrag</a><a href="#architecture">Arkitektur</a><a href="#results">Resultat</a><a href="#interactive-explorer">3D-visning</a><a href="#publication">Examensarbete</a>
+</div></div>
+<section id="overview"><h2>Projektets mål</h2>
+<div class="case-intro-grid">
+<div>
+<p>Tidig utveckling av exoskelett kräver kontrollerade och upprepbara tester. Jag utvecklade en robotbaserad knäfantom för att undersöka drivning, sensormätning och mekanisk interaktion, med en digital representation kopplad till det fysiska systemet.</p>
+<p>Prototypen kombinerar antagonistisk drivning, en elastisk mekanism och pneumatisk simulering av mjukvävnad. En Raspberry Pi kopplar den fysiska plattformen till Unity via ROS 2 och överför kommandon och återkoppling från systemet.</p>
+</div>
+<figure class="zoomable-figure">
+
+                <button class="image-zoom-trigger" type="button" data-image-dialog="platform-overview-dialog" aria-label="Öppna en större bild av den robotbaserade knäfantomen">
+
+                    <img class="project-image" src="../../assets/images/projects/robotic-phantom-knee-overview.png" alt="Transparent rendering av Robotic Phantom Knee som visar de inre mekaniska, robotiska, pneumatiska och elektroniska komponenterna" loading="lazy" decoding="async" width="2098" height="1248">
+
+                    <span class="zoom-hint">
+                        Visa större ↗
+                    </span>
+
+                </button>
+
+                <figcaption class="image-caption">
+                    Transparent rendering av Robotic Phantom Knee som visar de integrerade mekaniska, robotiska, pneumatiska och elektroniska komponenterna.
+                </figcaption>
+
+            </figure>
+
+            </div>
+<dialog class="image-dialog" id="platform-overview-dialog" aria-label="Översiktsbild av den robotbaserade knäfantomen">
+
+                <button class="dialog-close" type="button" data-dialog-close aria-label="Stäng den förstorade systemöversikten">
+                    ×
+                </button>
+
+                <img class="dialog-image" src="../../assets/images/projects/robotic-phantom-knee-overview.png" alt="Förstorad transparent rendering av Robotic Phantom Knee och dess inre komponenter" loading="lazy" decoding="async" width="2098" height="1248">
+
+            </dialog>
+        </section><section id="demonstration"><h2>Projektdemonstration</h2>
+<p>Se funktionsprincipen, modellering och tillverkning, montering, hårdvaruintegration, Unity-gränssnittet och testning av delar av systemet.</p>
+      <div class="video-container" data-video-id="lWRFAtuQzvM" data-video-title="Spela upp projektdemonstrationen"><a class="video-launch" href="https://www.youtube.com/watch?v=lWRFAtuQzvM" target="_blank" rel="noopener noreferrer"><img src="../../assets/images/projects/robotic-phantom-knee-overview.png" alt="" loading="lazy" decoding="async" width="2098" height="1248"><span>Spela upp projektdemonstrationen <span aria-hidden="true">▶</span></span></a></div>
+      <p class="video-caption"><a href="https://www.youtube.com/watch?v=lWRFAtuQzvM" target="_blank" rel="noopener noreferrer">Se på YouTube</a></p></section><section id="contribution"><h2>Mitt tekniska bidrag</h2>
+<ul class="contribution-list">
+<li>
+<strong>Konstruktion och prototyputveckling:</strong> Utvecklade knämekanismen och specialanpassade komponenter med Blender och 3D-utskrift och integrerade därefter ställdonen och de pneumatiska komponenterna.</li>
+<li>
+<strong>Hårdvaruintegration:</strong> Anslöt robotställdonen och de distribuerade sensorerna samt implementerade kedjan för datainsamling och styrning.</li>
+<li>
+<strong>ROS 2-arkitektur:</strong> Strukturerade noder för kommunikation med ställdon, sensordata och integration av delsystem.</li>
+<li>
+<strong>Digital tvilling:</strong> Utvecklade Unity-miljön och den dubbelriktade anslutningen för styrkommandon och återkoppling från det fysiska systemet.</li>
+<li>
+<strong>Testning:</strong> Utförde stegvisa tester av delsystem och delar av den integrerade plattformen samt dokumenterade implementerade funktioner och begränsningar i integrationen.</li>
+</ul></section><section id="architecture"><h2>Systemarkitektur och tekniska val</h2>
+<p>En Raspberry Pi 5 med Ubuntu 24.04 och ROS 2 Jazzy kopplar samman ställdonen, sensorerna och den digitala tvillingen i Unity. Separata noder delar upp delsystemens funktioner så att de kan utvecklas och testas stegvis.</p>
+<figure class="zoomable-figure">
+
+                <button class="image-zoom-trigger" type="button" data-image-dialog="architecture-image-dialog" aria-label="Öppna en större bild av systemarkitekturen">
+
+                    <img class="project-image" src="../../assets/images/projects/robotic-phantom-knee-system-architecture.png" alt="Systemarkitektur för Robotic Phantom Knee med dubbelriktad kommunikation mellan Unity, Raspberry Pi med Ubuntu och ROS 2 samt den fysiska robotplattformen" loading="lazy" decoding="async" width="4636" height="2037">
+
+                    <span class="zoom-hint">
+                        Visa större ↗
+                    </span>
+
+                </button>
+
+                <figcaption class="image-caption">
+                    Kommunikationsarkitektur för Robotic Phantom Knee som kopplar samman Unity-miljön, ROS 2 på Raspberry Pi 5 och den fysiska robotplattformen.
+                </figcaption>
+
+            </figure>
+
+            <dialog class="image-dialog" id="architecture-image-dialog" aria-label="Bild av systemarkitekturen">
+
+                <button class="dialog-close" type="button" data-dialog-close aria-label="Stäng den förstorade arkitekturbilden">
+                    ×
+                </button>
+
+                <img class="dialog-image" src="../../assets/images/projects/robotic-phantom-knee-system-architecture.png" alt="Förstorad bild av systemarkitekturen för Robotic Phantom Knee och dess digitala tvilling" loading="lazy" decoding="async" width="4636" height="2037">
+
+            </dialog>
+        <details class="technical-details"><summary>Mekanism och antagonistisk drivning</summary><p>Två ställdon som kan drivas baklänges av yttre krafter har utväxlingarna 19:1 och 5:1. Det andra ställdonet följer det första inom ett justerbart rörelseband. En elastisk mekanism ger möjlighet att undersöka eftergivlighet och variabel styvhet.</p></details><details class="technical-details"><summary>Pneumatiskt system</summary><p>Uppblåsbara kammare bildar ett eftergivligt yttre lager runt knästrukturen. En pump, en behållare, ventiler och tryckmätning möjliggör tryckreglering, uppblåsning och kontrollerad lufttömning.</p></details><details class="technical-details"><summary>Inbyggda sensorsystem</summary><p>Moduler på lår och underben använder FeatherS3-mikrokontroller med tröghetssensorer av typen ISM330DHCX, magnetometrar av typen MMC5983MA och temperatursensorer av typen TMP117. Separata ROS 2-noder för in deras data i styrplattformen.</p></details><details class="technical-details"><summary>Kommunikation och Unity-gränssnitt</summary><p>Kommandon överförs från Unity till det fysiska systemet via ROS–TCP. Återkoppling från ställdon och sensorer uppdaterar den digitala representationen. Gränssnittet används för att övervaka systemets tillstånd och justera experimentparametrar.</p></details></section><section id="results"><h2>Testning, resultat och begränsningar</h2>
+<p>Examensarbetet dokumenterar utvärdering av delsystem och delar av den integrerade plattformen. I det officiella sammandraget redovisas bland annat följande resultat:</p>
+<div class="results-grid">
+<article class="information-card"><h3>Digital kommunikation</h3>
+<p>Stabil dataöverföring via ROS–TCP vid validering av delsystem.</p></article><article class="information-card"><h3>Tryckreglering</h3>
+<p>Tryckföljning med återkopplad reglering, lämplig för pneumatiska bänkförsök.</p></article><article class="information-card"><h3>Säkerhetsfunktioner</h3>
+<p>Tester av nödstopp och lufttömning.</p></article><article class="information-card"><h3>Följning och rörelsebegränsning</h3>
+<p>Projektdemonstrationen visar hur bandet för relativ rörelse kan justeras från 0° till ungefär ±38°.</p></article>
+</div>
+<p class="results-note">Detta är en forskningsprototyp. Fortsatt biomekanisk karakterisering, utvärdering av styvhet och heltäckande validering på systemnivå återstår som utvecklingsområden. Examensarbetet beskriver försöksuppställningen och begränsningarna.</p>
+<a href="https://hdl.handle.net/20.500.12380/311285" target="_blank" rel="noopener noreferrer" hreflang="en">Läs examensarbetet hos Chalmers</a></section><section id="interactive-explorer">
+            <h2>Utforska konstruktionen i 3D</h2>
+
+            <p>Den här webbaserade visningen visar den mekaniska konstruktionen och dess delar. Den digitala tvillingen som är kopplad till ROS finns i Unity-miljön som visas i projektdemonstrationen.</p>
+
+            <figure class="interactive-model-figure">
+
+                <div class="interactive-model-shell">
+
+                    <div class="model-intro" id="model-intro">
+<img src="../../assets/images/projects/robotic-phantom-knee-overview.png" alt="Den robotbaserade knäfantomens mekaniska konstruktion" loading="lazy" decoding="async" width="2098" height="1248"><div class="model-intro-copy">
+<p id="model-message" role="status">Bilden finns alltid tillgänglig. För att utforska enskilda delar behövs JavaScript och stöd för 3D-grafik.</p>
+<div class="action-links">
+<button class="button secondary" type="button" id="retry-model" hidden>Försök igen</button><a href="../../assets/images/projects/robotic-phantom-knee-overview.png" target="_blank" rel="noopener noreferrer">Visa större bild</a>
+</div>
+</div>
+</div>
+<div class="model-toolbar" role="group" aria-label="Kontroller för 3D-modellen" hidden="">
+
+                        <label class="part-select-label" for="model-part-select">Välj en komponent<select id="model-part-select"><option value="">Välj en komponent</option></select></label><button class="model-tool is-active" type="button" data-transform-mode="select" aria-pressed="true">
+                            Markera
+                        </button>
+
+                        <button class="model-tool" type="button" data-transform-mode="translate" aria-pressed="false">
+                            Flytta
+                        </button>
+
+                        <button class="model-tool" type="button" data-transform-mode="rotate" aria-pressed="false">
+                            Rotera
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="explode">
+                            Sprängvy
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="hide" disabled>
+                            Dölj delen
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="show-all">
+                            Visa alla
+                        </button>
+
+                        <button class="model-tool" type="button" data-model-action="reset">
+                            Återställ
+                        </button>
+
+                        <span class="selected-part-name" id="selected-part-name" aria-live="polite">
+                            Ingen del vald
+                        </span>
+
+                    </div>
+
+                    <div class="interactive-model" id="interactive-model" aria-label="Interaktiv 3D-modell av Robotic Phantom Knee" hidden="">
+
+                        <div class="model-interaction-hint" id="model-interaction-hint" aria-hidden="true">
+
+                            <img class="model-controls-prompt" src="../../assets/images/model-viewer-hand-prompt.svg" alt="" loading="lazy" decoding="async">
+
+                        </div>
+
+                    </div>
+
+                    <div class="model-loading" id="model-loading" role="status" hidden="">
+                        Laddar 3D-modellen…
+                    </div>
+
+                </div>
+
+                <figcaption class="image-caption">
+                    Klicka på en komponent för att markera den. Använd Flytta eller Rotera för att ändra den valda delens läge, eller Sprängvy för att undersöka hela konstruktionen.
+                </figcaption>
+
+            </figure>
+        <p class="model-keyboard-help" id="model-keyboard-help">Tangentbord: fokusera modellen med Tab eller klicka i den. Använd piltangenterna för att panorera, + eller − för att zooma och 0 för att återställa. Välj enskilda delar i komponentlistan.</p></section>
+
+        <section id="publication"><h2>Läs hela examensarbetet</h2>
+<p>Masterexamensarbetet i Chalmers publikationsdatabas beskriver konstruktion, implementering, experimentella metoder, resultat och begränsningar. Det publicerades 2026 inom masterprogrammet Biomedical Engineering.</p>
+<a class="button secondary" href="https://hdl.handle.net/20.500.12380/311285" target="_blank" rel="noopener noreferrer" hreflang="en">Läs examensarbetet hos Chalmers</a></section><section class="project-cta"><div class="project-cta-copy">
+<h2>Prata med mig om projektet</h2>
+<p>Jag är intresserad av samtal om medicinsk robotik, digitala tvillingar, systemintegration och forskningsmöjligheter.</p>
+<div class="project-cta-actions">
+<a class="button" href="mailto:wajih.habrah@hotmail.com">Kontakta mig</a><a class="button secondary" href="../../assets/documents/wajih-habrah-cv.pdf" target="_blank" rel="noopener noreferrer" hreflang="en">Visa CV (PDF, engelska)</a>
+</div>
+</div></section></main><footer><div>© 2026 Wajih Habrah</div>
+<div class="footer-links">
+      <a href="../index.html">Startsida</a>
+      <a href="mailto:wajih.habrah@hotmail.com">E-post</a>
+      <a href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer" lang="en">GitHub</a>
+      <a href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank" rel="noopener noreferrer" lang="en">LinkedIn</a>
+    </div></footer>
+</body>
+
+</html>

@@ -28,7 +28,20 @@ const viewerText = interfaceLanguage === "ar"
         assemble: "تجميع",
         noPart: "لم يتم تحديد أي جزء",
         unnamedPart: "مكوّن بلا اسم",
+        canvasLabel: "النموذج التفاعلي للركبة الروبوتية",
         selected: (name) => `المحدّد: ${name}`
+    }
+    : interfaceLanguage === "sv"
+    ? {
+        loading: (percentage) =>
+            `Laddar 3D-modellen… ${percentage}%`,
+        loadError: "Det gick inte att ladda 3D-modellen.",
+        explode: "Sprängvy",
+        assemble: "Sätt ihop",
+        noPart: "Ingen del vald",
+        unnamedPart: "Namnlös komponent",
+        canvasLabel: "Interaktiv modell av den robotbaserade knäfantomen",
+        selected: (name) => `Vald: ${name}`
     }
     : {
         loading: (percentage) =>
@@ -39,6 +52,7 @@ const viewerText = interfaceLanguage === "ar"
         assemble: "Assemble",
         noPart: "No part selected",
         unnamedPart: "Unnamed component",
+        canvasLabel: "Interactive robotic phantom knee model",
         selected: (name) => `Selected: ${name}`
     };
 
@@ -131,6 +145,14 @@ function initializeViewer() {
     renderer.setClearColor(0x000000, 0);
 
     container.appendChild(renderer.domElement);
+    renderer.domElement.tabIndex = 0;
+    renderer.domElement.setAttribute("aria-label", viewerText.canvasLabel);
+    renderer.domElement.setAttribute("aria-describedby", "model-keyboard-help");
+    renderer.domElement.addEventListener("webglcontextlost", (event) => {
+        event.preventDefault();
+        renderer.setAnimationLoop(null);
+        container.dispatchEvent(new Event("model-error"));
+    });
 
     renderer.domElement.addEventListener(
     "pointerdown",
@@ -239,6 +261,26 @@ function initializeViewer() {
     orbitControls.dampingFactor = 0.06;
     orbitControls.autoRotate = false;
     orbitControls.autoRotateSpeed = 1.65;
+    orbitControls.listenToKeyEvents(renderer.domElement);
+    renderer.domElement.addEventListener("keydown", (event) => {
+        if (event.ctrlKey || event.metaKey || event.altKey) return;
+        if (["+", "=", "-", "0", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) stopIntroMotion();
+        if (["+", "=", "-"].includes(event.key)) {
+            event.preventDefault();
+            camera.position.sub(orbitControls.target).multiplyScalar(event.key === "-" ? 1.12 : 1 / 1.12).add(orbitControls.target);
+            orbitControls.update();
+        } else if (event.key === "0") {
+            event.preventDefault();
+            resetModel();
+        }
+    });
+    const partSelect = document.getElementById("model-part-select");
+    partSelect?.addEventListener("change", () => {
+        stopIntroMotion();
+        const part = partSelect.value === "" ? null : selectableParts[Number(partSelect.value)];
+        if (part) part.visible = true;
+        setSelectedPart(part || null);
+    });
 
     const viewerObserver =
         new IntersectionObserver(
@@ -379,7 +421,16 @@ function initializeViewer() {
                 loadingMessage.hidden = true;
             }
 
+            if (partSelect) {
+                selectableParts.forEach((part, index) => {
+                    const option = document.createElement("option");
+                    option.value = String(index);
+                    option.textContent = (part.name.replaceAll("_", " ").trim() || viewerText.unnamedPart) + " (" + (index + 1) + ")";
+                    partSelect.appendChild(option);
+                });
+            }
             modelIsReady = true;
+            container.dispatchEvent(new Event("model-ready"));
             updateIntroMotion();
         },
 
@@ -409,6 +460,8 @@ function initializeViewer() {
                 loadingMessage.textContent =
                     viewerText.loadError;
             }
+            renderer.setAnimationLoop(null);
+            container.dispatchEvent(new Event("model-error"));
         }
     );
 
@@ -575,7 +628,7 @@ function initializeViewer() {
 
     partAnimation = {
         startTime: performance.now(),
-        duration: 700,
+        duration: prefersReducedMotion ? 1 : 700,
         startPositions,
         targetPositions
     };
@@ -994,6 +1047,7 @@ function updatePartAnimation(time) {
 
 function setSelectedPart(part) {
     selectedPart = part;
+    if (partSelect) partSelect.value = part ? String(selectableParts.indexOf(part)) : "";
 
     if (hideButton) {
         hideButton.disabled = !selectedPart;
@@ -1076,6 +1130,7 @@ function setSelectedPart(part) {
     /* Rendering loop */
 
     function render(time) {
+        if (!viewerIsVisible || document.hidden) return;
         updatePartAnimation(time);
         updateResetAnimation(time);
         applyIntroWiggle(time);

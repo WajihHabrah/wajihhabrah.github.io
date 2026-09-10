@@ -3,503 +3,183 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link rel="stylesheet" href="../assets/css/shared.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="الموقع المهني للمهندس وجيه هبره، المتخصص في الهندسة الطبية الحيوية والتقنيات الطبية والروبوتات والتوائم الرقمية.">
-  <title>وجيه هبره | مهندس طب حيوي</title>
 
-  <style>
-    nav div a {
-      margin-inline-start: 20px;
-    }
+  <meta name="description" content="الموقع المهني لوجيه هبره: خبرة في الهندسة السريرية والروبوتات الطبية والأنظمة المضمنة والتوائم الرقمية.">
 
-    header {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      padding: 80px 8%;
-      background: var(--surface);
-    }
-
-    .hero {
-      max-width: 1100px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .hero-content {
-      min-width: 0;
-    }
-
-    .profile-photo {
-      width: 280px;
-      height: 280px;
-      display: block;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-      border: 6px solid #ffffff;
-      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.18);
-    }
-
-    .hero p:first-child {
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    h1 {
-      margin: 10px 0;
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      line-height: 1.1;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    .subtitle {
-      max-width: 750px;
-      font-size: 1.25rem;
-      color: #4b5563;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .skill-group {
-      padding: 25px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .skill-group h3 {
-      margin-top: 0;
-      color: var(--primary);
-    }
-
-    .skill-group ul {
-      margin-bottom: 0;
-      padding-inline-start: 20px;
-    }
-
-    .skill-group li {
-      margin-bottom: 8px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .card-image {
-      width: calc(100% + 50px);
-      height: 220px;
-      display: block;
-      margin: -25px -25px 22px;
-      object-fit: cover;
-      border-radius: var(--radius) var(--radius) 0 0;
-    }
-
-    .experience-item {
-      padding: 30px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .experience-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 25px;
-      margin-bottom: 15px;
-    }
-
-    .experience-header h3 {
-      margin: 0 0 5px;
-    }
-
-    .experience-company {
-      margin: 0;
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    .experience-date {
-      margin: 0;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .experience-item li {
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 650px) {
-      nav {
-        display: block;
-        padding: 16px 6%;
-      }
-
-      nav strong {
-        display: block;
-        margin-bottom: 12px;
-      }
-
-      nav div {
-        display: flex;
-        gap: 18px;
-        overflow-x: auto;
-        padding-bottom: 6px;
-      }
-
-      nav div a {
-        flex: 0 0 auto;
-        margin-inline-start: 0;
-        font-size: 0.95rem;
-      }
-
-      header {
-        min-height: auto;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .hero-content {
-        order: 2;
-      }
-
-      .profile-photo {
-        width: 210px;
-        height: 210px;
-        margin: auto;
-        order: 1;
-      }
-
-      .experience-header {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .experience-date {
-        white-space: normal;
-      }
-    }
-  </style>
+  <title>وجيه هبره | مهندس طبي</title>
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ar_AR">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:title" content="وجيه هبره | مهندس طب حيوي">
-  <meta property="og:description"
-    content="مهندس طب حيوي ذو خبرة في التقنيات الطبية بالمستشفيات والروبوتات والأنظمة المضمنة والتوائم الرقمية.">
+
+  <meta property="og:title" content="وجيه هبره | مهندس طبي">
+
+  <meta property="og:description" content="الموقع المهني لوجيه هبره: خبرة في الهندسة السريرية والروبوتات الطبية والأنظمة المضمنة والتوائم الرقمية.">
+
   <meta property="og:url" content="https://wajihhabrah.github.io/ar/">
+
   <meta property="og:image" content="https://wajihhabrah.github.io/assets/images/wajih-habrah-portfolio-preview.png">
-  <meta property="og:image:alt" content="الموقع المهني للمهندس وجيه هبره">
+
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="canonical" href="https://wajihhabrah.github.io/ar/">
-  <link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/">
-  <link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/">
-  <link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "وجيه هبره",
-    "url": "https://wajihhabrah.github.io/ar/",
-    "inLanguage": "ar",
-    "image": "https://wajihhabrah.github.io/assets/images/wajih-habrah-profile.jpg",
-    "jobTitle": "مهندس طب حيوي",
-    "email": "mailto:wajih.habrah@hotmail.com",
-    "sameAs": [
-      "https://github.com/WajihHabrah",
-      "https://www.linkedin.com/in/wajih-habrah-38103367/",
-      "https://www.youtube.com/watch?v=lWRFAtuQzvM"
-    ],
-    "knowsAbout": [
-      "الهندسة الطبية الحيوية",
-      "الهندسة السريرية",
-      "التقنيات الطبية",
-      "الروبوتات",
-      "الأنظمة المضمنة",
-      "ROS 2",
-      "التوائم الرقمية",
-      "Unity",
-      "الأجهزة الطبية"
-    ],
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Chalmers University of Technology"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "وجيه هبره",
+  "url": "https://wajihhabrah.github.io/ar/",
+  "image": "https://wajihhabrah.github.io/assets/images/wajih-habrah-profile.jpg",
+  "jobTitle": "مهندس طبي",
+  "email": "mailto:wajih.habrah@hotmail.com",
+  "sameAs": [
+    "https://github.com/WajihHabrah",
+    "https://www.linkedin.com/in/wajih-habrah-38103367/",
+    "https://www.youtube.com/watch?v=lWRFAtuQzvM"
+  ],
+  "knowsAbout": [
+    "Biomedical Engineering",
+    "Clinical Engineering",
+    "Medical Technology",
+    "Robotics",
+    "Embedded Systems",
+    "ROS 2",
+    "Digital Twins",
+    "Unity",
+    "Medical Devices"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Chalmers University of Technology"
   }
-  </script>
+}
+</script>
+<link rel="stylesheet" href="../assets/css/shared.css">
+<link rel="stylesheet" href="../assets/css/home.css">
+<script src="../assets/js/project.js" defer></script>
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="en" href="https://wajihhabrah.github.io/">
+<meta property="og:locale:alternate" content="sv_SE">
+<link rel="alternate" hreflang="sv" href="https://wajihhabrah.github.io/sv/">
+<link rel="alternate" hreflang="ar" href="https://wajihhabrah.github.io/ar/">
+<link rel="alternate" hreflang="x-default" href="https://wajihhabrah.github.io/">
 </head>
 
 <body>
-  <nav>
-    <strong class="ltr">وجيه هبره</strong>
-
-    <div>
-      <a href="#about">نبذة عني</a>
-      <a href="#skills">المهارات</a>
-      <a href="#experience">الخبرة</a>
-      <a href="#education">التعليم</a>
-      <a href="#projects">المشروعات</a>
-      <a href="#contact">التواصل</a>
-      <a class="language-link ltr" href="../index.html" lang="en"
-        aria-label="View this portfolio in English">English</a>
+<a class="skip-link" href="#main-content">انتقل إلى المحتوى</a><nav class="site-nav" aria-label="التنقل الرئيسي"><div class="nav-inner">
+      <a class="brand" href="index.html">وجيه هبره</a><div class="nav-links" id="primary-navigation">
+<a href="#projects">الأعمال المختارة</a><a href="#experience">الخبرة</a><a href="#skills">المهارات</a><a href="#education">التعليم</a><a href="#contact">التواصل</a>
+</div>
+      <div class="nav-actions">
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>القائمة</button><div class="language-switcher" role="group" aria-label="اختر اللغة">
+<a class="language-link" lang="en" dir="ltr" title="English" href="../index.html" hreflang="en" aria-label="Read this page in English">EN</a><a class="language-link" lang="sv" dir="ltr" title="Svenska" href="../sv/index.html" hreflang="sv" aria-label="Läs den här sidan på svenska">SV</a><span class="language-link" lang="ar" dir="rtl" title="العربية" aria-current="page" aria-label="العربية">العربية</span>
+</div>
+</div>
+    </div></nav><header class="home-header" id="about"><div class="hero">
+<div class="hero-content">
+      <p class="eyebrow">مهندس طبي · الروبوتات والتوائم الرقمية</p>
+<h1>وجيه هبره</h1>
+<p class="subtitle">أجمع بين خبرتي في التقنيات الطبية بالمستشفيات وتطوير الأنظمة الروبوتية والتوائم الرقمية. تشمل خلفيتي العمل في الهندسة السريرية لدى Södersjukhuset وماجستير الهندسة الطبية الحيوية من جامعة تشالمرز.</p>
+      <ul class="hero-facts">
+<li>خبرة بالمستشفيات منذ 2018</li>
+<li>ماجستير تشالمرز · 2026</li>
+<li>ROS 2 · Unity · الاستشعار المضمن</li>
+</ul>
+      <div class="hero-actions">
+<a class="button" href="#projects">استعرض أعمالي</a><a class="button secondary" href="../assets/documents/wajih-habrah-cv.pdf" target="_blank" rel="noopener noreferrer">عرض السيرة الذاتية (PDF)</a>
+</div>
+      <div class="hero-social">
+<a href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer" lang="en">GitHub</a><a href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank" rel="noopener noreferrer" lang="en">LinkedIn</a>
+</div>
     </div>
-  </nav>
-
-  <header>
-    <div class="hero">
-      <div class="hero-content">
-        <p>مهندس طب حيوي</p>
-        <h1><span class="ltr">وجيه هبره</span></h1>
-
-        <p class="subtitle">
-          مهندس طب حيوي أمتلك خبرة في التقنيات الطبية بالمستشفيات منذ عام 2018،
-          تشمل أربع سنوات بدوام كامل أعقبتها مهام بالساعة وأعمال استشارية. أدمج
-          هذه الخلفية في الهندسة السريرية مع خبرتي في الروبوتات والأنظمة المضمنة
-          و<span class="ltr">ROS 2</span> والمحاكاة وتطوير التوائم الرقمية.
-        </p>
-
-        <a class="button" href="#projects">عرض مشروعاتي</a>
-        <a class="button secondary ltr" href="https://github.com/WajihHabrah" target="_blank"
-          rel="noopener noreferrer">GitHub</a>
-        <a class="button secondary ltr" href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank"
-          rel="noopener noreferrer">LinkedIn</a>
-        <a class="button secondary" href="../assets/documents/wajih-habrah-cv.pdf" download>تنزيل السيرة الذاتية</a>
-      </div>
-
-      <img class="profile-photo" src="../assets/images/wajih-habrah-profile.jpg" alt="صورة مهنية للمهندس وجيه هبره">
-    </div>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>نبذة عني</h2>
-      <p>
-        أحمل درجتَي البكالوريوس والماجستير في الهندسة الطبية الحيوية. وتشمل خبرتي
-        في التقنيات الطبية بالمستشفيات عملاً بدوام كامل من عام 2018 حتى نهاية عام
-        2021، ثم مهاماً بالساعة وأعمالاً استشارية منذ عام 2022.
-      </p>
-      <p>
-        تشمل اهتماماتي المهنية والبحثية الأجهزة الطبية والأنظمة الروبوتية
-        والاستشعار المضمن و<span class="ltr">ROS 2</span> و<span class="ltr">Unity</span>
-        والذكاء الاصطناعي والتوائم الرقمية لتطبيقات الرعاية الصحية وإعادة التأهيل.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>المهارات التقنية</h2>
-      <div class="skills-grid">
-        <article class="skill-group">
-          <h3>الهندسة السريرية</h3>
-          <ul>
-            <li>صيانة الأجهزة الطبية</li>
-            <li>المعايرة والتحقق الوظيفي</li>
-            <li>استكشاف الأعطال التقنية وإصلاحها</li>
-            <li>الصيانة الوقائية وتوثيق أعمال الخدمة</li>
-            <li>سلامة الأجهزة والتوثيق</li>
-            <li>الدعم التقني للعاملين في الرعاية الصحية</li>
-          </ul>
-        </article>
-
-        <article class="skill-group">
-          <h3>الروبوتات والتوائم الرقمية</h3>
-          <ul>
-            <li>تكامل الأنظمة الروبوتية</li>
-            <li><span class="ltr">ROS 2</span></li>
-            <li>المحاكاة باستخدام <span class="ltr">Unity</span></li>
-            <li>تطوير التوائم الرقمية</li>
-            <li>التحكم بالمشغلات والاتصال بها</li>
-            <li>تكامل المستشعرات في الزمن الحقيقي</li>
-          </ul>
-        </article>
-
-        <article class="skill-group">
-          <h3>الأنظمة المضمنة والبرمجيات</h3>
-          <ul>
-            <li><span class="ltr">Raspberry Pi</span></li>
-            <li>المستشعرات المضمنة ووحدات القياس بالقصور الذاتي</li>
-            <li><span class="ltr">Python</span> و<span class="ltr">C++</span></li>
-            <li>الاتصال التسلسلي</li>
-            <li><span class="ltr">Ubuntu</span> و<span class="ltr">Linux</span></li>
-            <li><span class="ltr">Git</span> و<span class="ltr">GitHub</span></li>
-          </ul>
-        </article>
-
-        <article class="skill-group">
-          <h3>الأدوات الهندسية</h3>
-          <ul>
-            <li><span class="ltr">Blender</span> والنمذجة ثلاثية الأبعاد</li>
-            <li>التوثيق التقني</li>
-            <li>معمارية الأنظمة</li>
-            <li>الاختبارات التجريبية</li>
-            <li>منهجية البحث</li>
-            <li>حل المشكلات الهندسية</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>الخبرة المهنية</h2>
-      <article class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>مهندس طب حيوي</h3>
-            <p class="experience-company"><span class="ltr">Södersjukhuset</span> · ستوكهولم، السويد</p>
-          </div>
-          <p class="experience-date">
-            دوام كامل: يناير 2018–ديسمبر 2021<br>
-            بالساعة/استشاري: يناير 2022–حتى الآن
-          </p>
-        </div>
-
-        <p>
-          دعمت التقنيات الطبية في بيئة المستشفى بدوام كامل من يناير 2018 حتى
-          ديسمبر 2021، ثم واصلت العمل من خلال مهام بالساعة وأعمال استشارية منذ
-          يناير 2022 وحتى الآن.
-        </p>
-        <ul>
-          <li>صيانة الأجهزة الطبية المستخدمة في العناية المركزة وغرف العمليات والأقسام التشخيصية ومعايرتها واستكشاف
-            أعطالها.</li>
-          <li>العمل على أجهزة العلاج التنفسي وأنظمة الأشعة المتنقلة ذات الذراع <span class="ltr">C</span> وأنظمة مراقبة
-            المرضى وغيرها من الأجهزة الطبية.</li>
-          <li>تحديث وثائق الصيانة الوقائية بإرشادات عملية مصوّرة لخدمة أجهزة الأشعة المتنقلة ذات الذراع <span
-              class="ltr">C</span>.</li>
-          <li>دعم العاملين في الرعاية الصحية في استخدام الأجهزة والإجابة عن الأسئلة التقنية ومتابعة السلامة.</li>
-          <li>المشاركة في الإبلاغ عن الحوادث والتحقيقات المرتبطة بسلامة الأجهزة الطبية.</li>
-        </ul>
-        <a href="projects/clinical-engineering-hospital-technology-ar.html">عرض خبرتي في الهندسة السريرية ←</a>
-      </article>
-    </section>
-
-    <section id="education">
-      <h2>التعليم</h2>
-      <div class="projects">
-        <article class="card">
-          <a class="university-logo-link" href="https://www.chalmers.se/en/" target="_blank" rel="noopener noreferrer"
-            aria-label="زيارة الموقع الرسمي لجامعة تشالمرز للتكنولوجيا">
-            <img class="university-logo" src="../assets/images/education/chalmers-university-logo.png"
-              alt="شعار جامعة تشالمرز للتكنولوجيا" loading="lazy" decoding="async">
-          </a>
-
-          <h3>ماجستير في الهندسة الطبية الحيوية</h3>
-          <p class="experience-company"><span class="ltr">Chalmers University of Technology</span> · غوتنبرغ، السويد</p>
-          <p class="experience-date"><span class="ltr">2023–2026 · 120 ECTS</span></p>
-          <p>
-            دراسات متقدمة في النمذجة الطبية الحيوية والتصوير الطبي ومعالجة الإشارات
-            والصور وهندسة إعادة التأهيل والصحة الرقمية وتعلّم الآلة.
-          </p>
-          <p>
-            <strong>رسالة الماجستير (<span class="ltr">30 ECTS</span>):</strong>
-            <a href="projects/robotic-phantom-knee-digital-twin-ar.html">منصة الركبة الروبوتية المحاكية والتوأم الرقمي
-              ←</a>
-          </p>
-          <p class="technologies">الهندسة الطبية الحيوية · التصوير الطبي · معالجة الإشارات · الذكاء الاصطناعي</p>
-          <a href="education/masters-degree/masters-biomedical-engineering-coursework-ar.html">عرض المقررات المختارة
-            ←</a>
-        </article>
-
-        <article class="card">
-          <a class="university-logo-link" href="https://www.damascusuniversity.edu.sy/" target="_blank"
-            rel="noopener noreferrer" aria-label="زيارة الموقع الرسمي لجامعة دمشق">
-            <img class="university-logo university-logo--damascus"
-              src="../assets/images/education/damascus-university-logo.png" alt="شعار جامعة دمشق" loading="lazy"
-              decoding="async">
-          </a>
-
-          <h3>بكالوريوس في الهندسة الطبية الحيوية</h3>
-          <p class="experience-company">جامعة دمشق · دمشق، سوريا</p>
-          <p class="experience-date">2007–2013 · برنامج هندسي مدته خمس سنوات</p>
-          <p>
-            تعليم هندسي شامل غطّى الأجهزة الطبية وأجهزة القياس والإلكترونيات
-            والإشارات والتصوير الطبي وأنظمة التحكم وهندسة المستشفيات وصيانة المعدات.
-          </p>
-          <p class="technologies">الأجهزة الطبية · أجهزة القياس · الهندسة السريرية · الإلكترونيات</p>
-          <a href="education/bachelors-degree/bachelors-biomedical-engineering-coursework-ar.html">عرض المقررات المختارة
-            ←</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>مشروعات مختارة</h2>
-      <div class="projects">
-        <article class="card">
-          <img class="card-image" src="../assets/images/projects/robotic-phantom-knee-overview.png"
-            alt="مشروع التوأم الرقمي لنموذج الركبة الروبوتية المحاكية">
-          <h3>رسالة الماجستير: التوأم الرقمي لنموذج الركبة الروبوتية المحاكية</h3>
-          <p>
-            تطوير منصة لاختبار الركبة الروبوتية تجمع بين المشغلات الفعلية
-            والمستشعرات المضمنة و<span class="ltr">ROS 2</span> وتوأم رقمي مبني
-            باستخدام <span class="ltr">Unity</span> للتحكم والمحاكاة والتحقق في الزمن الحقيقي.
-          </p>
-          <p class="technologies">الروبوتات الطبية الحيوية · <span class="ltr">ROS 2</span> · <span
-              class="ltr">Raspberry Pi</span> · <span class="ltr">Unity</span> · التوائم الرقمية</p>
-          <a href="projects/robotic-phantom-knee-digital-twin-ar.html">عرض المشروع ←</a>
-          &nbsp;&nbsp;
-          <a href="https://www.youtube.com/watch?v=lWRFAtuQzvM" target="_blank" rel="noopener noreferrer">مشاهدة العرض
-            ←</a>
-        </article>
-
-        <article class="card">
-          <img class="card-image" src="../assets/images/projects/clinical-engineering-hospital-technology.jpg"
-            alt="المدخل الرئيسي لمستشفى Södersjukhuset في ستوكهولم" loading="lazy">
-          <h3>الهندسة السريرية والتقنيات الطبية في المستشفى</h3>
-          <p>
-            خبرة في الهندسة السريرية لدى <span class="ltr">Södersjukhuset</span>
-            تشمل صيانة الأجهزة الطبية ومعايرتها واستكشاف أعطالها وسلامة المرضى
-            وتوثيق أعمال الخدمة والتدريب التقني.
-          </p>
-          <p class="technologies">الهندسة السريرية · سلامة المرضى · التدريب التقني</p>
-          <a href="projects/clinical-engineering-hospital-technology-ar.html">عرض الخبرة ←</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>التواصل</h2>
-      <p>أهتم بالفرص المرتبطة بالهندسة الطبية الحيوية والأجهزة الطبية والروبوتات والبحث والتطوير.</p>
-      <p>البريد الإلكتروني: <a class="ltr" href="mailto:wajih.habrah@hotmail.com">wajih.habrah@hotmail.com</a></p>
-      <p><span class="ltr">GitHub:</span> <a class="ltr" href="https://github.com/WajihHabrah" target="_blank"
-          rel="noopener noreferrer">WajihHabrah</a></p>
-      <p><span class="ltr">LinkedIn:</span> <a class="ltr" href="https://www.linkedin.com/in/wajih-habrah-38103367/"
-          target="_blank" rel="noopener noreferrer">وجيه هبره</a></p>
-      <p>السيرة الذاتية: <a href="../assets/documents/wajih-habrah-cv.pdf" target="_blank" rel="noopener noreferrer">عرض
-          السيرة الذاتية</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div>© 2026 <span class="ltr">وجيه هبره</span></div>
-    <div class="footer-links">
+<img class="profile-photo" src="../assets/images/wajih-habrah-profile.jpg" width="800" height="785" alt="صورة وجيه هبره" fetchpriority="high">
+</div></header><main id="main-content"><section id="projects"><h2>أعمال هندسية مختارة</h2>
+<p class="section-intro">من صيانة الأجهزة الطبية في المستشفى إلى تطوير منصة روبوتية للبحث والاختبار.</p>
+<div class="projects">
+      <article class="card work-card"><img class="card-image" src="../assets/images/projects/robotic-phantom-knee-overview.png" width="2098" height="1248" alt="نموذج الركبة الروبوتية المحاكية" loading="lazy" decoding="async"><p class="work-kind">رسالة ماجستير · 2026</p>
+<h3>الركبة الروبوتية المحاكية والتوأم الرقمي</h3>
+<p>منصة اختبار بدرجة حرية واحدة تجمع بين التشغيل المتضاد والمستشعرات المضمنة وROS 2 وتوأم رقمي في Unity. شمل المشروع بناء النموذج الأولي ودمج الأنظمة واختبارات الأنظمة الفرعية.</p>
+<p class="technologies">الروبوتات الطبية · ROS 2 · Unity</p>
+<div class="action-links card-actions">
+<a href="projects/robotic-phantom-knee-digital-twin-ar.html">استكشف المشروع</a><a href="projects/robotic-phantom-knee-digital-twin-ar.html#demonstration">شاهد العرض</a>
+</div></article>
+      <article class="card work-card"><img class="card-image" src="../assets/images/projects/clinical-engineering-hospital-technology.jpg" alt="مستشفى Södersjukhuset في ستوكهولم" loading="lazy" decoding="async" width="1200" height="700"><p class="work-kind">خبرة مهنية · ستوكهولم</p>
+<h3>الهندسة السريرية لدى Södersjukhuset</h3>
+<p>صيانة الأجهزة الطبية ومعايرتها وتشخيص أعطالها، مع تطوير إرشادات مصوّرة للصيانة الوقائية لأجهزة الأشعة المتنقلة ذات الذراع C ودعم الطواقم السريرية.</p>
+<p class="technologies">الأجهزة الطبية · الصيانة · التوثيق</p>
+<div class="action-links card-actions"><a href="projects/clinical-engineering-hospital-technology-ar.html">استعرض الخبرة</a></div></article>
+    </div></section><section id="experience"><h2>الخبرة المهنية</h2>
+<article class="experience-item"><div class="experience-header">
+<div>
+<h3>مهندس طبي</h3>
+<p class="experience-company">Södersjukhuset · ستوكهولم، السويد</p>
+</div>
+<p class="experience-date">دوام كامل: يناير 2018–ديسمبر 2021<br>بالساعة/استشاري: يناير 2022–حتى الآن</p>
+</div>
+<ul>
+<li>صيانة الأجهزة الطبية ومعايرتها وتشخيص أعطالها في العناية المركزة وغرف العمليات والأقسام التشخيصية.</li>
+<li>العمل على أجهزة العلاج التنفسي والتصوير المتنقل ومراقبة المرضى وغيرها من الأجهزة الطبية.</li>
+<li>تطوير توثيق الصيانة الوقائية لأجهزة Ziehm بإرشادات عملية مصوّرة.</li>
+<li>دعم العاملين في الرعاية الصحية والمشاركة في متابعة الحوادث والانحرافات المتعلقة بسلامة الأجهزة.</li>
+</ul>
+<a href="projects/clinical-engineering-hospital-technology-ar.html#c-arm-maintenance">استعرض دراسة حالة الصيانة والتوثيق</a></article></section><section id="skills"><h2>المهارات التقنية</h2>
+<p class="section-intro">خبرة عملية ومهارات طُبّقت في العمل بالمستشفى ومشروع الماجستير.</p>
+<div class="skills-grid">
+<article class="skill-group"><h3>الهندسة السريرية</h3>
+<p class="skill-context">خبرة مهنية</p>
+<ul>
+<li>الصيانة الوقائية والتصحيحية</li>
+<li>المعايرة والتحقق الوظيفي</li>
+<li>تشخيص الأعطال وتوثيق الصيانة</li>
+<li>الدعم التقني للطواقم السريرية</li>
+</ul>
+<a href="projects/clinical-engineering-hospital-technology-ar.html">شاهد التطبيق العملي</a></article><article class="skill-group"><h3>الروبوتات والأنظمة المضمنة</h3>
+<p class="skill-context">خبرة ضمن مشروع الماجستير</p>
+<ul>
+<li>تكامل المشغلات والمستشعرات</li>
+<li>Raspberry Pi وFeatherS3</li>
+<li>ROS 2 والاتصال التسلسلي</li>
+<li>Python وC++ ضمن المشروع</li>
+</ul>
+<a href="projects/robotic-phantom-knee-digital-twin-ar.html#architecture">استعرض معمارية النظام</a></article><article class="skill-group"><h3>التوأم الرقمي والنمذجة الأولية</h3>
+<p class="skill-context">خبرة ضمن مشروع الماجستير</p>
+<ul>
+<li>Unity والاتصال ثنائي الاتجاه</li>
+<li>Blender والنمذجة ثلاثية الأبعاد</li>
+<li>الطباعة ثلاثية الأبعاد والتجميع</li>
+<li>اختبار الأنظمة وتوثيقها</li>
+</ul>
+<a href="projects/robotic-phantom-knee-digital-twin-ar.html#demonstration">شاهد العرض العملي</a></article>
+</div></section><section id="education"><h2>التعليم</h2>
+<div class="projects">
+      <article class="card education-card"><a class="university-logo-link" href="https://www.chalmers.se/en/" target="_blank" rel="noopener noreferrer"><img class="university-logo" src="../assets/images/education/chalmers-university-logo.png" alt="جامعة تشالمرز للتكنولوجيا" loading="lazy" decoding="async" width="583" height="742"></a><h3>ماجستير الهندسة الطبية الحيوية</h3>
+<p class="experience-company">جامعة تشالمرز للتكنولوجيا · غوتنبرغ، السويد</p>
+<p class="experience-date">2023–2026 · 120 ECTS</p>
+<p>دراسات متقدمة في النمذجة الطبية الحيوية والتصوير الطبي ومعالجة الإشارات والصور وهندسة إعادة التأهيل والصحة الرقمية وتعلّم الآلة.</p>
+<p><strong>رسالة الماجستير · 30 ECTS</strong><br><a href="projects/robotic-phantom-knee-digital-twin-ar.html">الركبة الروبوتية المحاكية والتوأم الرقمي</a></p>
+<a class="coursework-link" href="education/masters-degree/masters-biomedical-engineering-coursework-ar.html">استعرض المقررات المختارة</a></article>
+      <article class="card education-card"><a class="university-logo-link" href="https://www.damascusuniversity.edu.sy/" target="_blank" rel="noopener noreferrer"><img class="university-logo university-logo--damascus" src="../assets/images/education/damascus-university-logo.png" alt="جامعة دمشق" loading="lazy" decoding="async" width="316" height="316"></a><h3>بكالوريوس الهندسة الطبية الحيوية</h3>
+<p class="experience-company">جامعة دمشق · دمشق، سوريا</p>
+<p class="experience-date">2007–2013 · برنامج هندسي مدته خمس سنوات</p>
+<p>تأهيل هندسي شامل في الأجهزة الطبية والإلكترونيات والقياسات الحيوية ومعالجة الإشارات والتحكم وهندسة المستشفيات.</p>
+<a class="coursework-link" href="education/bachelors-degree/bachelors-biomedical-engineering-coursework-ar.html">استعرض المقررات المختارة</a></article>
+    </div></section><section id="contact"><div class="contact-panel">
+<h2>التواصل والفرص المهنية</h2>
+<p>أرحب بالتواصل بشأن فرص الهندسة السريرية وتطوير الأجهزة الطبية والروبوتات والبحث والتطوير، إضافة إلى الفرص البحثية ودراسة الدكتوراه.</p>
+<p class="contact-email"><a href="mailto:wajih.habrah@hotmail.com" dir="ltr">wajih.habrah@hotmail.com</a></p>
+<div class="action-links">
+<a class="button" href="mailto:wajih.habrah@hotmail.com">تواصل معي</a><a class="button secondary" href="../assets/documents/wajih-habrah-cv.pdf" target="_blank" rel="noopener noreferrer">عرض السيرة الذاتية (PDF)</a><a href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank" rel="noopener noreferrer" lang="en">LinkedIn</a>
+</div>
+</div></section></main><footer><div>© 2026 وجيه هبره</div>
+<div class="footer-links">
+      <a href="index.html">الرئيسية</a>
       <a href="mailto:wajih.habrah@hotmail.com">البريد الإلكتروني</a>
-      <a class="ltr" href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="ltr" href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank"
-        rel="noopener noreferrer">LinkedIn</a>
-    </div>
-  </footer>
+      <a href="https://github.com/WajihHabrah" target="_blank" rel="noopener noreferrer" lang="en">GitHub</a>
+      <a href="https://www.linkedin.com/in/wajih-habrah-38103367/" target="_blank" rel="noopener noreferrer" lang="en">LinkedIn</a>
+    </div></footer>
 </body>
-
 </html>

@@ -1,122 +1,112 @@
-# Wajih Habrah — English, Arabic and Swedish portfolio
+# Wajih Habrah — Biomedical Engineering Portfolio
 
-Source update, 10 September 2026 (automatic model loading and section-scroll correction). This package includes the previous portfolio refinements and adds Swedish to all five page types.
+[View the live portfolio](https://wajihhabrah.github.io/)
 
-## Install
+A static, multilingual engineering portfolio presenting Wajih Habrah's work in
+clinical engineering, medical technology, robotics, embedded sensing and digital
+twins. The website is available in English, Swedish and Arabic and is published
+with GitHub Pages.
 
-1. Extract `Wajih-Habrah-Portfolio-Update.zip` into a temporary folder.
-2. Copy its contents into your existing website project folder, alongside the existing root `index.html`.
-3. Merge matching folders and replace matching files. Preserve the contents of your existing `assets` folder: this download does not include your images, PDFs or 3D model.
-4. Keep the `sv` folder at the website root, next to `ar`, `projects`, `education` and `assets`.
-5. Preview through your usual local HTTP server. JavaScript modules in the 3D viewer require HTTP; opening the HTML through a `file://` URL is insufficient for that feature.
-6. Review the language navigation and interactive features in your browser, then commit and push through your usual GitHub workflow when ready.
+## Portfolio content
 
-You can use this ZIP whether or not you already installed the previous 17-file update. If `home.css` and `model-loader.js` already exist, replace them with these versions too. There is no need to install the earlier ZIP first.
+- **Clinical engineering:** experience at Södersjukhuset in Stockholm, including
+  preventive and corrective maintenance, calibration, functional testing,
+  troubleshooting, technical documentation and support for clinical staff.
+- **Robotic Phantom Knee and Digital Twin:** a one-degree-of-freedom research
+  prototype developed as a master's thesis at Chalmers University of Technology.
+  The project combines antagonistic actuation, pneumatic soft-tissue simulation,
+  embedded sensing, ROS 2 and a Unity digital twin.
+- **Education:** selected master's and bachelor's coursework in biomedical
+  engineering, signal processing, control, rehabilitation engineering, medical
+  imaging and related technical subjects.
 
-## Files included
+## Languages and CVs
 
-The 23 files below are already arranged in their destination folders. “Add” refers to your portfolio before the earlier refinement package.
+Each language has its own homepage, project pages, education pages and CV.
 
-| Action | Relative destination |
-| --- | --- |
-| Replace | `README.md` |
-| Replace | `ar/education/bachelors-degree/bachelors-biomedical-engineering-coursework-ar.html` |
-| Replace | `ar/education/masters-degree/masters-biomedical-engineering-coursework-ar.html` |
-| Replace | `ar/index.html` |
-| Replace | `ar/projects/clinical-engineering-hospital-technology-ar.html` |
-| Replace | `ar/projects/robotic-phantom-knee-digital-twin-ar.html` |
-| Add | `assets/css/home.css` |
-| Replace | `assets/css/project.css` |
-| Replace | `assets/css/shared.css` |
-| Replace | `assets/js/interactive-model.js` |
-| Add | `assets/js/model-loader.js` |
-| Replace | `assets/js/project.js` |
-| Replace | `education/bachelors-degree/bachelors-biomedical-engineering-coursework.html` |
-| Replace | `education/masters-degree/masters-biomedical-engineering-coursework.html` |
-| Replace | `index.html` |
-| Replace | `projects/clinical-engineering-hospital-technology.html` |
-| Replace | `projects/robotic-phantom-knee-digital-twin.html` |
-| Replace | `sitemap.xml` |
-| Add | `sv/education/bachelors-degree/bachelors-biomedical-engineering-coursework-sv.html` |
-| Add | `sv/education/masters-degree/masters-biomedical-engineering-coursework-sv.html` |
-| Add | `sv/index.html` |
-| Add | `sv/projects/clinical-engineering-hospital-technology-sv.html` |
-| Add | `sv/projects/robotic-phantom-knee-digital-twin-sv.html` |
+| Language | Homepage | CV file |
+| --- | --- | --- |
+| English | [`index.html`](index.html) | [`wajih-habrah-cv-en.pdf`](assets/documents/wajih-habrah-cv-en.pdf) |
+| Swedish | [`sv/index.html`](sv/index.html) | [`wajih-habrah-cv-sv.pdf`](assets/documents/wajih-habrah-cv-sv.pdf) |
+| Arabic | [`ar/index.html`](ar/index.html) | [`wajih-habrah-cv-ar.pdf`](assets/documents/wajih-habrah-cv-ar.pdf) |
 
-## Latest requested corrections
+The website links each language version directly to its corresponding PDF. The
+CVs use the Swedish telephone number and Gothenburg location. Arabic uses the
+professional title **مهندس طبي**.
 
-- The 3D model now starts downloading automatically when a thesis page opens in any of the three languages. The load button has been removed. Loading and failure handling do not move keyboard focus or scroll the page.
-- The Arabic professional title is now “مهندس طبي” in the visible content, page title, social metadata and structured profile data.
-- Section navigation uses one measured sticky-header offset. The duplicate section scroll margins were removed, bringing headings higher in the viewport while retaining normal section spacing. The offset updates when the navigation wraps, the mobile menu closes or the viewport changes.
-- The supplied screen recording was reviewed to compare the original landing position with the manually adjusted position.
+## Main website features
 
-## Swedish pages
+- Responsive layouts for desktop, tablet and mobile screens.
+- English, Swedish and Arabic navigation with right-to-left layout for Arabic.
+- Reciprocal `hreflang` metadata, canonical URLs and a multilingual sitemap for
+  all 15 HTML pages.
+- Accessible skip links, keyboard navigation, visible focus states and reduced
+  motion support.
+- Image enlargement dialogs and video previews that load YouTube only after the
+  visitor activates them.
+- An interactive Three.js viewer for the Robotic Phantom Knee GLB model with
+  orbit controls, component selection, exploded view, isolation, hiding,
+  translation, rotation and reset controls.
+- Automatic 3D-model loading with localized progress, failure and unsupported
+  graphics messages.
+- Mouse, touch and keyboard guidance for the 3D viewer, with a static image
+  fallback when the interactive model is unavailable.
 
-The Swedish homepage is `sv/index.html`, available at `/sv/` once published. Swedish detail pages use the `-sv.html` suffix; Arabic detail pages retain `-ar.html`. English URLs remain as before.
+## Technology
 
-The five Swedish pages cover the homepage, clinical engineering at Södersjukhuset, the Robotic Phantom Knee thesis project, master's coursework and bachelor's coursework.
+The portfolio uses plain HTML, CSS and JavaScript. It does not require a package
+manager, application framework, database or server-side runtime.
 
-Each page has an EN / SV / العربية selector. The active language is indicated, and each alternative opens the corresponding page. The links work without JavaScript. The navigation accommodates the language selector on narrow screens.
+- **HTML:** semantic page structure, metadata and structured content.
+- **CSS:** shared design tokens, responsive layouts and language-aware styling.
+- **JavaScript:** navigation, dialogs, deferred video embedding, model loading and
+  3D interaction.
+- **Three.js 0.180.0:** loaded through pinned jsDelivr ES-module imports.
+- **GitHub Pages:** static hosting from the repository.
 
-Swedish content includes navigation, image descriptions, video labels, document-link labels, metadata and 3D viewer instructions, controls, loading messages and fallback messages. Authored CAD component names remain the names supplied in the existing model.
+## Run locally
 
-The Swedish experience text retains full-time employment in January 2018–December 2021, followed by hourly/consulting assignments on a part-time basis from January 2022 onward. It describes respiratory therapy equipment without changing that experience to ventilator servicing.
+The HTML pages can be inspected directly, but the JavaScript modules used by the
+3D viewer require an HTTP server. From the repository root, run:
 
-Existing PDFs, thesis publication, video and text embedded in images remain in their original languages. CV links on Swedish pages identify the existing English CV; official Chalmers syllabus links also identify English resources. Swedish course titles are descriptive translations of the supplied English content. The Swedish thesis page identifies the underlying publication as English in its structured metadata.
+```sh
+python -m http.server 8000
+```
 
-## Search metadata
+Then open:
 
-All 15 pages include reciprocal English, Swedish and Arabic `hreflang` links, with English as `x-default`. Canonical URLs and social-preview URLs identify each page's own language version. The included `sitemap.xml` lists all 15 pages and their matching language alternatives. Replace your existing sitemap when applying this package.
+- `http://localhost:8000/`
+- `http://localhost:8000/sv/`
+- `http://localhost:8000/ar/`
 
-Keep your existing `robots.txt` and `googlebbfc94b51f98188a.html` unchanged.
+## Deployment
 
-## Earlier refinements included
+Commit the repository and push it to the branch configured as the GitHub Pages
+publishing source. No build command is required. Preserve the directory structure
+because page links and assets use relative paths.
 
-- Selected work appears directly below the homepage introduction.
-- English, Arabic and Swedish homepages use the same structure and styling.
-- The thesis page has a shorter narrative, visible results and limitations, section navigation and expandable technical explanations.
-- The hospital maintenance example appears before the training catalogue and service workflow.
-- Shared navigation, contrast, image sizing, skip links, dialog labels and document labels are refined.
-- YouTube loads after the visitor activates the preview.
-- The 3D viewer loads automatically when the project page opens, with an image fallback. It retains the existing interaction and introductory guidance, with a component selector, keyboard pan/zoom/reset, reduced-motion handling and an offscreen rendering guard.
+The 3D model is approximately 17 MB and begins downloading when a thesis project
+page opens. Three.js and YouTube also require an internet connection.
 
-## Existing assets required
+## CV maintenance
 
-Keep all existing images, logos, PDF documents and model files in their current paths, particularly:
+The three finished CVs are stored directly in `assets/documents/`:
 
-- `assets/models/robotic-phantom-knee.glb`
-- `assets/images/model-viewer-hand-prompt.svg`
-- `assets/images/projects/robotic-phantom-knee-overview.png`
-- `assets/images/projects/robotic-phantom-knee-system-architecture.png`
-- `assets/images/projects/clinical-engineering-hospital-technology.jpg`
-- `assets/images/wajih-habrah-profile.jpg`
-- Both university logos in `assets/images/education/`
-- Your CV and training PDFs in `assets/documents/`
+```text
+wajih-habrah-cv-en.pdf
+wajih-habrah-cv-sv.pdf
+wajih-habrah-cv-ar.pdf
+```
 
-Three.js continues to use the existing pinned jsDelivr imports. Those modules and YouTube require an internet connection.
+When replacing a CV, keep its existing filename so all corresponding homepage
+and project-page links continue to work. Update the English, Swedish and Arabic
+versions together when employment dates, contact details or qualifications
+change.
 
-## Validation
+## Project structure
 
-Passed: all 15 HTML pages, 30 cross-language navigation links, reciprocal language metadata, the 15 sitemap entries, local asset and anchor targets, JSON metadata and the three JavaScript files' syntax. Automatic model imports, success, unsupported-graphics, loading-failure and lost-context states were exercised for all three languages without a browser. Background loading preserved keyboard focus in these checks. Navigation-height updates were checked for mobile-menu closure and viewport changes; the duplicate scroll margins are absent.
-
-A full browser or real-device check of the updated pages and interactive 3D model has not been performed. Before publishing, check the mobile menu, language switching, image enlargement, video activation and 3D controls in your normal browser.
-
-## Maintenance
-
-- `shared.css`: shared colors, typography, navigation, language selector, buttons and footer.
-- `home.css`: all three homepages.
-- `project.css`: thesis, clinical-engineering and coursework pages.
-- `project.js`: mobile navigation, image dialogs and video previews.
-- `model-loader.js`: automatic loading and localized loading/fallback messages.
-- `interactive-model.js`: Three.js interaction and localized viewer controls.
-
-Update corresponding English, Arabic and Swedish pages together when changing content. If a URL changes, update navigation, canonical URLs, social URLs, language alternatives and the sitemap together.
-
-
-File Tree:
-
+```text
 wajihhabrah.github.io/
-│
 ├── index.html
 ├── README.md
 ├── robots.txt
@@ -126,85 +116,101 @@ wajihhabrah.github.io/
 ├── ar/
 │   ├── index.html
 │   ├── education/
-│   │   ├── bachelors-degree
-│   │   │   └── bachelors-biomedical-engineering-coursework-ar.html
-│   │   │
-│   │   └── masters-degree
-│   │       └── masters-biomedical-engineering-coursework-ar.html
+│   │   ├── bachelors-biomedical-engineering-coursework-ar.html
+│   │   └── masters-biomedical-engineering-coursework-ar.html
 │   └── projects/
 │       ├── clinical-engineering-hospital-technology-ar.html
-│       │
 │       └── robotic-phantom-knee-digital-twin-ar.html
 │
 ├── sv/
 │   ├── index.html
 │   ├── education/
-│   │   ├── bachelors-degree
-│   │   │   └── bachelors-biomedical-engineering-coursework-sv.html
-│   │   │
-│   │   └── masters-degree
-│   │       └── masters-biomedical-engineering-coursework-sv.html
+│   │   ├── bachelors-biomedical-engineering-coursework-sv.html
+│   │   └── masters-biomedical-engineering-coursework-sv.html
 │   └── projects/
 │       ├── clinical-engineering-hospital-technology-sv.html
-│       │
 │       └── robotic-phantom-knee-digital-twin-sv.html
 │
-│
 ├── assets/
-│   │
 │   ├── css/
 │   │   ├── home.css
-│   │   │
 │   │   ├── project.css
-│   │   │
 │   │   └── shared.css
 │   │
 │   ├── documents/
-│   │   ├── clinical-engineering/
-│   │   │   ├── b-braun-infusion-pumps-training.pdf
-│   │   │   ├── cardiolex-quickels-ecg-training.pdf
-│   │   │   ├── fisher-paykel-respiratory-equipment-training.pdf
-│   │   │   ├── mcube-biocon-700-training.pdf
-│   │   │   ├── medical-device-safety-training.pdf
-│   │   │   ├── philips-intellivue-monitoring-training.pdf
-│   │   │   └── smiths-medical-patient-warming-training.pdf
-│   │   │
-│   │   └── wajih-habrah-cv.pdf
+│   │   ├── wajih-habrah-cv-en.pdf
+│   │   ├── wajih-habrah-cv-sv.pdf
+│   │   ├── wajih-habrah-cv-ar.pdf
+│   │   └── clinical-engineering/
+│   │       ├── b-braun-infusion-pumps-training.pdf
+│   │       ├── cardiolex-quickels-ecg-training.pdf
+│   │       ├── fisher-paykel-respiratory-equipment-training.pdf
+│   │       ├── mcube-biocon-700-training.pdf
+│   │       ├── medical-device-safety-training.pdf
+│   │       ├── philips-intellivue-monitoring-training.pdf
+│   │       └── smiths-medical-patient-warming-training.pdf
 │   │
 │   ├── images/
-│   │   ├── education/
-│   │   │   ├── chalmers-university-logo.png
-│   │   │   └── damascus-university-logo.png
-│   │   │
-│   │   ├── projects/
-│   │   │   ├── clinical-engineering-hospital-technology.jpg
-│   │   │   ├── robotic-phantom-knee-overview.png
-│   │   │   └── robotic-phantom-knee-system-architecture.png
-│   │   │
 │   │   ├── favicon.svg
 │   │   ├── model-viewer-hand-prompt.svg
 │   │   ├── wajih-habrah-portfolio-preview.png
-│   │   └── wajih-habrah-profile.jpg
+│   │   ├── wajih-habrah-profile.jpg
+│   │   ├── education/
+│   │   │   ├── chalmers-university-logo.png
+│   │   │   └── damascus-university-logo.png
+│   │   └── projects/
+│   │       ├── clinical-engineering-hospital-technology.jpg
+│   │       ├── robotic-phantom-knee-overview.png
+│   │       └── robotic-phantom-knee-system-architecture.png
 │   │
 │   ├── js/
 │   │   ├── interactive-model.js
-│   │   │
 │   │   ├── model-loader.js
-│   │   │
 │   │   └── project.js
 │   │
 │   └── models/
 │       └── robotic-phantom-knee.glb
 │
 ├── education/
-│   ├── bachelors-degree/
-│   │   └── bachelors-biomedical-engineering-coursework.html
-│   │ 
-│   └── masters-degree/
-│       └── masters-biomedical-engineering-coursework.html
+│   ├── bachelors-biomedical-engineering-coursework.html
+│   └── masters-biomedical-engineering-coursework.html
 │
 └── projects/
-    │
-    ├── robotic-phantom-knee-digital-twin.html
-    │
-    └── clinical-engineering-hospital-technology.html
+    ├── clinical-engineering-hospital-technology.html
+    └── robotic-phantom-knee-digital-twin.html
+```
+
+## File responsibilities
+
+- `shared.css` controls shared colours, typography, navigation, language
+  selectors, buttons and the footer.
+- `home.css` controls the English, Swedish and Arabic homepages.
+- `project.css` controls project, clinical-engineering and coursework pages.
+- `project.js` controls mobile navigation, image dialogs and deferred video
+  previews.
+- `model-loader.js` controls automatic model loading and localized status or
+  fallback messages.
+- `interactive-model.js` controls Three.js selection, camera movement, exploded
+  view, object transforms and keyboard interaction.
+- `sitemap.xml` lists the 15 localized HTML URLs and their language alternatives.
+
+When a page URL changes, update its navigation links, canonical URL, social
+metadata, language alternatives and sitemap entry together.
+
+## Existing assets
+
+Keep all file names and relative paths stable, particularly the GLB model,
+interaction-guidance SVG, project images, university logos, CVs and training
+documents. The published thesis remains available through the official Chalmers
+repository link used on the project pages.
+
+## Validation
+
+The portfolio has been checked for local page and asset references, language
+navigation, reciprocal language metadata, sitemap entries, structured metadata
+and JavaScript syntax. The CV update uses four verified links per language across
+the corresponding homepage and project pages.
+
+Before a major release, preview the mobile menu, language switching, image
+dialogs, video activation and interactive 3D controls in a desktop and mobile
+browser.
